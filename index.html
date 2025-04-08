@@ -1,0 +1,4253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_993e253ff3dd53932953dbb2bb89f25b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+<style>
+.leaflet-control-layers-base label, 
+.leaflet-control-layers-overlays label {
+    font-size: 16px !important;
+    font-weight: bold;
+}
+</style>
+    
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+     z-index: 9999; background-color: white; padding: 10px; border: 2px solid #ccc;
+     box-shadow: 2px 2px 6px rgba(0,0,0,0.3);">
+    <h2 style="margin: 0; font-size: 24px;">Radiation Oncology Facility in the Philippines as of 2025</h2>
+</div>
+    
+            <div class="folium-map" id="map_993e253ff3dd53932953dbb2bb89f25b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_993e253ff3dd53932953dbb2bb89f25b = L.map(
+                "map_993e253ff3dd53932953dbb2bb89f25b",
+                {
+                    center: [12.8797, 121.774],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c40be0fbfbc1abcc50283452323e676f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c40be0fbfbc1abcc50283452323e676f.addTo(map_993e253ff3dd53932953dbb2bb89f25b);
+        
+    
+            var feature_group_4c697c883206d066d53e6f89c1d3f68b = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_8701091c02127c8a17b38d2108d9ab23 = L.marker(
+                [14.41343323589265, 121.04361012848864],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_a10bbe66e2caf7f091fbba217e3c5c90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed5042da9d3f0a72a30c286c7415b132 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cd251fb351d7ce63cd8cfbe0008233a5 = $(`<div id="html_cd251fb351d7ce63cd8cfbe0008233a5" style="width: 100.0%; height: 100.0%;"><b>Asian Hospital</b><br>220 East Avenue, Filinvest City, Alabang, Muntinlupa, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_ed5042da9d3f0a72a30c286c7415b132.setContent(html_cd251fb351d7ce63cd8cfbe0008233a5);
+            
+        
+
+        marker_8701091c02127c8a17b38d2108d9ab23.bindPopup(popup_ed5042da9d3f0a72a30c286c7415b132)
+        ;
+
+        
+    
+    
+                marker_8701091c02127c8a17b38d2108d9ab23.setIcon(icon_a10bbe66e2caf7f091fbba217e3c5c90);
+            
+    
+            var marker_c1d392698a8f49e2066d99fd782be36d = L.marker(
+                [14.62305602072567, 121.02384373404237],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_658fdc9fadf21c208d72308e7577b67a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a55eab2e674f3914f743817187ef5dbb = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_688bcf93c044eb2a7cfb1425d8f1dd2d = $(`<div id="html_688bcf93c044eb2a7cfb1425d8f1dd2d" style="width: 100.0%; height: 100.0%;"><b>Cardinal Santos Medical Center</b><br>140 E. Rodriguez Sr. Avenue, San Juan, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_a55eab2e674f3914f743817187ef5dbb.setContent(html_688bcf93c044eb2a7cfb1425d8f1dd2d);
+            
+        
+
+        marker_c1d392698a8f49e2066d99fd782be36d.bindPopup(popup_a55eab2e674f3914f743817187ef5dbb)
+        ;
+
+        
+    
+    
+                marker_c1d392698a8f49e2066d99fd782be36d.setIcon(icon_658fdc9fadf21c208d72308e7577b67a);
+            
+    
+            var marker_ab943c7b8a2acc244269d81e7339542f = L.marker(
+                [14.625957736550129, 120.98801588235929],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_303d3818c8ddab5f7d1c2dd11d07df16 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fb22f293182ab083089ea7fc1a821677 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2bdd875419a2e178bff99b885474f3e5 = $(`<div id="html_2bdd875419a2e178bff99b885474f3e5" style="width: 100.0%; height: 100.0%;"><b>Chinese General Hospital & Medical Center</b><br>286 Blumentritt Rd, Santa Cruz, Manila, 1014 Metro Manila<br>Services: Basic RT</div>`)[0];
+                popup_fb22f293182ab083089ea7fc1a821677.setContent(html_2bdd875419a2e178bff99b885474f3e5);
+            
+        
+
+        marker_ab943c7b8a2acc244269d81e7339542f.bindPopup(popup_fb22f293182ab083089ea7fc1a821677)
+        ;
+
+        
+    
+    
+                marker_ab943c7b8a2acc244269d81e7339542f.setIcon(icon_303d3818c8ddab5f7d1c2dd11d07df16);
+            
+    
+            var marker_e10ed5b3e5281be996e019fca5a24f50 = L.marker(
+                [14.502801702668364, 121.04841520988423],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_66166af18e92e631812a8d7eba8d63ea = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_281a6cffd2f746348f7bc9a8e03ccf35 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ccf59abf6e5dd10e2c07400269ce4700 = $(`<div id="html_ccf59abf6e5dd10e2c07400269ce4700" style="width: 100.0%; height: 100.0%;"><b>Healthway Cancer Care Hospital</b><br>ARCA South, South Union Dr, Taguig, 1630 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_281a6cffd2f746348f7bc9a8e03ccf35.setContent(html_ccf59abf6e5dd10e2c07400269ce4700);
+            
+        
+
+        marker_e10ed5b3e5281be996e019fca5a24f50.bindPopup(popup_281a6cffd2f746348f7bc9a8e03ccf35)
+        ;
+
+        
+    
+    
+                marker_e10ed5b3e5281be996e019fca5a24f50.setIcon(icon_66166af18e92e631812a8d7eba8d63ea);
+            
+    
+            var marker_31cec4ca03323d53bada06a54a73cecf = L.marker(
+                [14.61431183108001, 120.98239178299279],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_5cf9ff4680fd2296d236036a172e3251 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ec53510c63b8e214bd717e38c25ed00 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_997173d473c1cdaa24accec0b18908f7 = $(`<div id="html_997173d473c1cdaa24accec0b18908f7" style="width: 100.0%; height: 100.0%;"><b>Jose R Reyes Memorial Medical Center</b><br>San Lazaro Compound, Rizal Avenue, Sta. Cruz, Manila, Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_0ec53510c63b8e214bd717e38c25ed00.setContent(html_997173d473c1cdaa24accec0b18908f7);
+            
+        
+
+        marker_31cec4ca03323d53bada06a54a73cecf.bindPopup(popup_0ec53510c63b8e214bd717e38c25ed00)
+        ;
+
+        
+    
+    
+                marker_31cec4ca03323d53bada06a54a73cecf.setIcon(icon_5cf9ff4680fd2296d236036a172e3251);
+            
+    
+            var marker_e2eb266194ad30ea7250ddc78260ec07 = L.marker(
+                [14.648267666437293, 121.04496683676649],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_40fabf3b25258d61562a93b794b40177 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f70e0ade3a13de3545ba890180394d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7e0b63fee239b9732d9255c3c9c64d5 = $(`<div id="html_f7e0b63fee239b9732d9255c3c9c64d5" style="width: 100.0%; height: 100.0%;"><b>Lung Center of the Philippines</b><br>Quirino Avenue, Quezon City, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_2f70e0ade3a13de3545ba890180394d4.setContent(html_f7e0b63fee239b9732d9255c3c9c64d5);
+            
+        
+
+        marker_e2eb266194ad30ea7250ddc78260ec07.bindPopup(popup_2f70e0ade3a13de3545ba890180394d4)
+        ;
+
+        
+    
+    
+                marker_e2eb266194ad30ea7250ddc78260ec07.setIcon(icon_40fabf3b25258d61562a93b794b40177);
+            
+    
+            var marker_3268c499e80bb7a453b279f5666e2004 = L.marker(
+                [14.559058058170336, 121.01480267712553],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_7b7caea46ef773a7d7499068d72658fe = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a5cf4057f3642ef8c5f59ffbcf7d3236 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2e1c53b4b395bd3e52864f662a849c7b = $(`<div id="html_2e1c53b4b395bd3e52864f662a849c7b" style="width: 100.0%; height: 100.0%;"><b>Makati Medical Center</b><br>2 Amorsolo Street, Makati, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_a5cf4057f3642ef8c5f59ffbcf7d3236.setContent(html_2e1c53b4b395bd3e52864f662a849c7b);
+            
+        
+
+        marker_3268c499e80bb7a453b279f5666e2004.bindPopup(popup_a5cf4057f3642ef8c5f59ffbcf7d3236)
+        ;
+
+        
+    
+    
+                marker_3268c499e80bb7a453b279f5666e2004.setIcon(icon_7b7caea46ef773a7d7499068d72658fe);
+            
+    
+            var marker_87e0af425bff44d7e55d34859f6e7cc5 = L.marker(
+                [14.581786946488517, 120.98295985402949],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_71e427ee6c4c0df2bee4a830770d0085 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbd814babbf89c29f7d512aa39077bfa = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4ef77cd1efaaff3de3be6bd797923586 = $(`<div id="html_4ef77cd1efaaff3de3be6bd797923586" style="width: 100.0%; height: 100.0%;"><b>Manila Doctors Hospital</b><br>667 United Nations Ave, Ermita, Manila, 1000 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_fbd814babbf89c29f7d512aa39077bfa.setContent(html_4ef77cd1efaaff3de3be6bd797923586);
+            
+        
+
+        marker_87e0af425bff44d7e55d34859f6e7cc5.bindPopup(popup_fbd814babbf89c29f7d512aa39077bfa)
+        ;
+
+        
+    
+    
+                marker_87e0af425bff44d7e55d34859f6e7cc5.setIcon(icon_71e427ee6c4c0df2bee4a830770d0085);
+            
+    
+            var marker_0670e68a96264cfe04b9f7a295e27ce6 = L.marker(
+                [14.582477599564424, 120.98539113358234],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_7cad74b17e588b00143a8886383031af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4737872d30fe7c6bbf7303622671ed43 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_188d70c4b1d255cce9a8b8f3dcc416ee = $(`<div id="html_188d70c4b1d255cce9a8b8f3dcc416ee" style="width: 100.0%; height: 100.0%;"><b>ManilaMed</b><br>850 United Nations Ave, Paco, Manila, Metro Manila, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_4737872d30fe7c6bbf7303622671ed43.setContent(html_188d70c4b1d255cce9a8b8f3dcc416ee);
+            
+        
+
+        marker_0670e68a96264cfe04b9f7a295e27ce6.bindPopup(popup_4737872d30fe7c6bbf7303622671ed43)
+        ;
+
+        
+    
+    
+                marker_0670e68a96264cfe04b9f7a295e27ce6.setIcon(icon_7cad74b17e588b00143a8886383031af);
+            
+    
+            var marker_8d574e04cf4ba04592a5917d671844fd = L.marker(
+                [14.609527536336369, 120.97876368611452],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_f257126f37efc07d7a4032322cd118ac = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_47046251b04612bd6b44bd75edabdf58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cecdbb765705e7d8a5f160949af2ffd1 = $(`<div id="html_cecdbb765705e7d8a5f160949af2ffd1" style="width: 100.0%; height: 100.0%;"><b>Metropolitan Medical Center</b><br>1357 Masangkay St, Santa Cruz, Manila, 1008 Metro Manila, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_47046251b04612bd6b44bd75edabdf58.setContent(html_cecdbb765705e7d8a5f160949af2ffd1);
+            
+        
+
+        marker_8d574e04cf4ba04592a5917d671844fd.bindPopup(popup_47046251b04612bd6b44bd75edabdf58)
+        ;
+
+        
+    
+    
+                marker_8d574e04cf4ba04592a5917d671844fd.setIcon(icon_f257126f37efc07d7a4032322cd118ac);
+            
+    
+            var marker_d7a6c75c5dcdbaeb150b4a6e0d2dfab2 = L.marker(
+                [14.577428048635355, 120.98561542524331],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_6f86ff5f9ce062194785fc63863bec97 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f9471b041703a10281a5ec76b9ef9573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_602b9ca8970065f0fb16ccc91b9b9683 = $(`<div id="html_602b9ca8970065f0fb16ccc91b9b9683" style="width: 100.0%; height: 100.0%;"><b>Philippine General Hospital</b><br>Taft Avenue, Ermita, Manila, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_f9471b041703a10281a5ec76b9ef9573.setContent(html_602b9ca8970065f0fb16ccc91b9b9683);
+            
+        
+
+        marker_d7a6c75c5dcdbaeb150b4a6e0d2dfab2.bindPopup(popup_f9471b041703a10281a5ec76b9ef9573)
+        ;
+
+        
+    
+    
+                marker_d7a6c75c5dcdbaeb150b4a6e0d2dfab2.setIcon(icon_6f86ff5f9ce062194785fc63863bec97);
+            
+    
+            var marker_1285f0c939b908f2c78b5b45fbb44f03 = L.marker(
+                [14.69975775711455, 121.06666198575053],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_40c70afa7cf514cfa7a82764569515f9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e72b57d6b4f3ad3a9101c771fde57dd9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_326e3344818e4331adfb977b0b94684c = $(`<div id="html_326e3344818e4331adfb977b0b94684c" style="width: 100.0%; height: 100.0%;"><b>POCC Fairview</b><br>Marian Medical Arts Building, Dahlia Ave, Novaliches, Quezon City, 1118 Metro Manila, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_e72b57d6b4f3ad3a9101c771fde57dd9.setContent(html_326e3344818e4331adfb977b0b94684c);
+            
+        
+
+        marker_1285f0c939b908f2c78b5b45fbb44f03.bindPopup(popup_e72b57d6b4f3ad3a9101c771fde57dd9)
+        ;
+
+        
+    
+    
+                marker_1285f0c939b908f2c78b5b45fbb44f03.setIcon(icon_40c70afa7cf514cfa7a82764569515f9);
+            
+    
+            var marker_ab75595d046b80850bfc69b12a436719 = L.marker(
+                [14.563904648061593, 121.06554835999249],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_5de26409a42bc347aa727e74c775178b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cc18c3f38151f01375a4158559cc4f12 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cb60e10bc1ca95301471467aa18e0298 = $(`<div id="html_cb60e10bc1ca95301471467aa18e0298" style="width: 100.0%; height: 100.0%;"><b>Rizal Medical Center</b><br>Rizal Avenue Extension, Pasig, Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_cc18c3f38151f01375a4158559cc4f12.setContent(html_cb60e10bc1ca95301471467aa18e0298);
+            
+        
+
+        marker_ab75595d046b80850bfc69b12a436719.bindPopup(popup_cc18c3f38151f01375a4158559cc4f12)
+        ;
+
+        
+    
+    
+                marker_ab75595d046b80850bfc69b12a436719.setIcon(icon_5de26409a42bc347aa727e74c775178b);
+            
+    
+            var marker_474d7c49f77ba2a483dcc229f0f3457f = L.marker(
+                [14.554966540797807, 121.04822128106332],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_4cb73e6f2518f4d70d9e96954487e5e8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e639d78639823c51645eca2769746ade = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c0aa5f11a3865d346a421fe770e169d2 = $(`<div id="html_c0aa5f11a3865d346a421fe770e169d2" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Global City</b><br>26th Street (corner McKinley Parkway), Bonifacio Global City, Taguig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_e639d78639823c51645eca2769746ade.setContent(html_c0aa5f11a3865d346a421fe770e169d2);
+            
+        
+
+        marker_474d7c49f77ba2a483dcc229f0f3457f.bindPopup(popup_e639d78639823c51645eca2769746ade)
+        ;
+
+        
+    
+    
+                marker_474d7c49f77ba2a483dcc229f0f3457f.setIcon(icon_4cb73e6f2518f4d70d9e96954487e5e8);
+            
+    
+            var marker_2105e4bcb40f2b3a4bc5c34feb6f9e77 = L.marker(
+                [14.622327930192524, 121.023379653053],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_807bc1421e4a21ddae6a200e0028350a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ee2f7fca5eec2564b1ab84434394ca0b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2b7fc9904f2e4e26ddadc295f8947ed1 = $(`<div id="html_2b7fc9904f2e4e26ddadc295f8947ed1" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Quezon City</b><br>279 E. Rodriguez Sr. Avenue, Quezon City, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_ee2f7fca5eec2564b1ab84434394ca0b.setContent(html_2b7fc9904f2e4e26ddadc295f8947ed1);
+            
+        
+
+        marker_2105e4bcb40f2b3a4bc5c34feb6f9e77.bindPopup(popup_ee2f7fca5eec2564b1ab84434394ca0b)
+        ;
+
+        
+    
+    
+                marker_2105e4bcb40f2b3a4bc5c34feb6f9e77.setIcon(icon_807bc1421e4a21ddae6a200e0028350a);
+            
+    
+            var marker_f2b6fca26e67b4038f5a959c4fd68275 = L.marker(
+                [14.589931028416567, 121.06898176428321],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_94b0e09a31252cad37b47fa7e622318b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ae38b5d8c93af7c0ada1972dfdc1be98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_200f3b01e1484bd98ce3eca087dd36b0 = $(`<div id="html_200f3b01e1484bd98ce3eca087dd36b0" style="width: 100.0%; height: 100.0%;"><b>The Medical City</b><br>Ortigas Avenue, Pasig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_ae38b5d8c93af7c0ada1972dfdc1be98.setContent(html_200f3b01e1484bd98ce3eca087dd36b0);
+            
+        
+
+        marker_f2b6fca26e67b4038f5a959c4fd68275.bindPopup(popup_ae38b5d8c93af7c0ada1972dfdc1be98)
+        ;
+
+        
+    
+    
+                marker_f2b6fca26e67b4038f5a959c4fd68275.setIcon(icon_94b0e09a31252cad37b47fa7e622318b);
+            
+    
+            var marker_4b1d883b564315ec85057be85a889235 = L.marker(
+                [14.448173323056999, 120.98578142112832],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_b36881300835d188eaebbf1d0cb7964c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5e57638c0d24f505f565e93284c4a609 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_54e1b25122e77f87df8fbceb6fec1cb1 = $(`<div id="html_54e1b25122e77f87df8fbceb6fec1cb1" style="width: 100.0%; height: 100.0%;"><b>Perpetual Help Medical Center – Las Pinas</b><br>Alabang–Zapote Rd, Las Piñas, 1740 Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_5e57638c0d24f505f565e93284c4a609.setContent(html_54e1b25122e77f87df8fbceb6fec1cb1);
+            
+        
+
+        marker_4b1d883b564315ec85057be85a889235.bindPopup(popup_5e57638c0d24f505f565e93284c4a609)
+        ;
+
+        
+    
+    
+                marker_4b1d883b564315ec85057be85a889235.setIcon(icon_b36881300835d188eaebbf1d0cb7964c);
+            
+    
+            var marker_43e05f967d2e36b73f15fd1f7fd2eedb = L.marker(
+                [14.612536333783906, 120.98945861375576],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_9bc182535ce782eac3c0eebc6b10c836 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dfd85bc0bb46ae2bdd6fd03a8d219113 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ed1da9be6e3b477a8129ec3f0d6ca9a = $(`<div id="html_3ed1da9be6e3b477a8129ec3f0d6ca9a" style="width: 100.0%; height: 100.0%;"><b>University of Santo Tomas Hospital</b><br>España Blvd, Sampaloc, Manila, 1015 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_dfd85bc0bb46ae2bdd6fd03a8d219113.setContent(html_3ed1da9be6e3b477a8129ec3f0d6ca9a);
+            
+        
+
+        marker_43e05f967d2e36b73f15fd1f7fd2eedb.bindPopup(popup_dfd85bc0bb46ae2bdd6fd03a8d219113)
+        ;
+
+        
+    
+    
+                marker_43e05f967d2e36b73f15fd1f7fd2eedb.setIcon(icon_9bc182535ce782eac3c0eebc6b10c836);
+            
+    
+            var marker_ff9fd13bcdcc93d7a04e3f01c73ff565 = L.marker(
+                [16.40096938090375, 120.59563285349591],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_8bddffa35230f6a449b9851656048e78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6d338161faea89fa6267adae3f85f30c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b80143ce92f45f4be05cdf7fd5d42ffa = $(`<div id="html_b80143ce92f45f4be05cdf7fd5d42ffa" style="width: 100.0%; height: 100.0%;"><b>Baguio General Hospital & Medical Center</b><br>Gov. Pack Rd, Baguio, 2600 Benguet, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_6d338161faea89fa6267adae3f85f30c.setContent(html_b80143ce92f45f4be05cdf7fd5d42ffa);
+            
+        
+
+        marker_ff9fd13bcdcc93d7a04e3f01c73ff565.bindPopup(popup_6d338161faea89fa6267adae3f85f30c)
+        ;
+
+        
+    
+    
+                marker_ff9fd13bcdcc93d7a04e3f01c73ff565.setIcon(icon_8bddffa35230f6a449b9851656048e78);
+            
+    
+            var marker_176f13cc32cd2249f57d084b7dc45430 = L.marker(
+                [16.417025117963973, 120.59772812778465],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_37389cd6aea9213e57cf52846461eb73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62a5f762564df68ace459529885aa5ab = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_805c1b7ac1a6617a5d9b4f54bf1ec63f = $(`<div id="html_805c1b7ac1a6617a5d9b4f54bf1ec63f" style="width: 100.0%; height: 100.0%;"><b>Saint Louis University Hospital of the Sacred Heart Medical Center</b><br>CH8X+R4R, Assumption Rd, Baguio, 2600 Benguet, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_62a5f762564df68ace459529885aa5ab.setContent(html_805c1b7ac1a6617a5d9b4f54bf1ec63f);
+            
+        
+
+        marker_176f13cc32cd2249f57d084b7dc45430.bindPopup(popup_62a5f762564df68ace459529885aa5ab)
+        ;
+
+        
+    
+    
+                marker_176f13cc32cd2249f57d084b7dc45430.setIcon(icon_37389cd6aea9213e57cf52846461eb73);
+            
+    
+            var marker_1609102bdbbe7354c3f068c98d440440 = L.marker(
+                [16.61429796967927, 120.31769515781853],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_4841e83f5affcde9c4f724384595b650 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3588d5373e3b7c1419094888673c155a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ad90cfe6b65615072052a7c1677e0490 = $(`<div id="html_ad90cfe6b65615072052a7c1677e0490" style="width: 100.0%; height: 100.0%;"><b>Bethany Hospital</b><br>J879+M2R, Widdoes St, San Fernando, La Union, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_3588d5373e3b7c1419094888673c155a.setContent(html_ad90cfe6b65615072052a7c1677e0490);
+            
+        
+
+        marker_1609102bdbbe7354c3f068c98d440440.bindPopup(popup_3588d5373e3b7c1419094888673c155a)
+        ;
+
+        
+    
+    
+                marker_1609102bdbbe7354c3f068c98d440440.setIcon(icon_4841e83f5affcde9c4f724384595b650);
+            
+    
+            var marker_22b4181a0fcdb6bbe4fb1951643ccb30 = L.marker(
+                [16.03671326035887, 120.34647174179464],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_4d19564fd6ec46a0cf84f763d1a783a9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88e1e534027f26f27cdbb7fdab130089 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75f6f7bb6055cb7b8401a5853c2be78d = $(`<div id="html_75f6f7bb6055cb7b8401a5853c2be78d" style="width: 100.0%; height: 100.0%;"><b>Dagupan Doctors Villaflor Memorial Hospital</b><br>MacArthur Hwy, Mayombo, Dagupan, 2400 Pangasinan, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_88e1e534027f26f27cdbb7fdab130089.setContent(html_75f6f7bb6055cb7b8401a5853c2be78d);
+            
+        
+
+        marker_22b4181a0fcdb6bbe4fb1951643ccb30.bindPopup(popup_88e1e534027f26f27cdbb7fdab130089)
+        ;
+
+        
+    
+    
+                marker_22b4181a0fcdb6bbe4fb1951643ccb30.setIcon(icon_4d19564fd6ec46a0cf84f763d1a783a9);
+            
+    
+            var marker_c1ed6156416bd645364023c43ed2a012 = L.marker(
+                [18.059919416637097, 120.55904394500968],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_6af7d6d843600b76adc2c4fffae29226 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cf2d58a9b68d4d40e5321723a424230f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8bbe19c019d3bf3d3cea5f144552991b = $(`<div id="html_8bbe19c019d3bf3d3cea5f144552991b" style="width: 100.0%; height: 100.0%;"><b>Mariano Marcos Memorial Hospital & Medical Center</b><br>Manila North Road, San Julian, Batac City, Ilocos Norte, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_cf2d58a9b68d4d40e5321723a424230f.setContent(html_8bbe19c019d3bf3d3cea5f144552991b);
+            
+        
+
+        marker_c1ed6156416bd645364023c43ed2a012.bindPopup(popup_cf2d58a9b68d4d40e5321723a424230f)
+        ;
+
+        
+    
+    
+                marker_c1ed6156416bd645364023c43ed2a012.setIcon(icon_6af7d6d843600b76adc2c4fffae29226);
+            
+    
+            var marker_fcea6b73902c8851e8f45e8a17cdedcc = L.marker(
+                [16.090490468080347, 120.36415747025022],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_de59d9925414d1678a4fbec51757751f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5c10eb547221a9c91350a82a22af025a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aa4018a2e4240581687716489e94201f = $(`<div id="html_aa4018a2e4240581687716489e94201f" style="width: 100.0%; height: 100.0%;"><b>Region 1 Medical Center</b><br>San Fabian - Bonuan - Dagupan Diversion Rd, Bonuan, Dagupan, Pangasinan, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_5c10eb547221a9c91350a82a22af025a.setContent(html_aa4018a2e4240581687716489e94201f);
+            
+        
+
+        marker_fcea6b73902c8851e8f45e8a17cdedcc.bindPopup(popup_5c10eb547221a9c91350a82a22af025a)
+        ;
+
+        
+    
+    
+                marker_fcea6b73902c8851e8f45e8a17cdedcc.setIcon(icon_de59d9925414d1678a4fbec51757751f);
+            
+    
+            var marker_4fcef9a509ad716a4973c46ed8fd0899 = L.marker(
+                [17.656423566151734, 121.74701096207119],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_e73e2bf1420e7a9f0fea00157cf185d1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a9282b2e0e9d02b3689230df3597727b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_65a19b6671ce19dbf058e4e1c32dcb51 = $(`<div id="html_65a19b6671ce19dbf058e4e1c32dcb51" style="width: 100.0%; height: 100.0%;"><b>Cagayan Valley Medical Center</b><br>Tuguegarao City, Cagayan, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_a9282b2e0e9d02b3689230df3597727b.setContent(html_65a19b6671ce19dbf058e4e1c32dcb51);
+            
+        
+
+        marker_4fcef9a509ad716a4973c46ed8fd0899.bindPopup(popup_a9282b2e0e9d02b3689230df3597727b)
+        ;
+
+        
+    
+    
+                marker_4fcef9a509ad716a4973c46ed8fd0899.setIcon(icon_e73e2bf1420e7a9f0fea00157cf185d1);
+            
+    
+            var marker_815cb041e660e5b9b95e680c3542ad77 = L.marker(
+                [15.477940091013812, 120.58733449185445],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_83995fe5cc739fe6ebd911f5604e0ba5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7491b5b0460fa63f90329f20fa61eb8d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_af4808111de192bdbf4d358069ad240d = $(`<div id="html_af4808111de192bdbf4d358069ad240d" style="width: 100.0%; height: 100.0%;"><b>Central Luzon Doctors Hospital</b><br>San Vicente, Tarlac City, 2300 Tarlac, Hospital Dr, Tarlac City, Tarlac, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_7491b5b0460fa63f90329f20fa61eb8d.setContent(html_af4808111de192bdbf4d358069ad240d);
+            
+        
+
+        marker_815cb041e660e5b9b95e680c3542ad77.bindPopup(popup_7491b5b0460fa63f90329f20fa61eb8d)
+        ;
+
+        
+    
+    
+                marker_815cb041e660e5b9b95e680c3542ad77.setIcon(icon_83995fe5cc739fe6ebd911f5604e0ba5);
+            
+    
+            var marker_c40aed219b3bb397bff3750bc62df0a5 = L.marker(
+                [15.49103977641401, 120.59749818869463],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_ced67c4904df062dae62cb14d13f9175 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7dafe69615c8675f0b556825e0dbbba1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a6fd61610dfa5f74440a1a74b3dc7746 = $(`<div id="html_a6fd61610dfa5f74440a1a74b3dc7746" style="width: 100.0%; height: 100.0%;"><b>Jecsons Medical Center</b><br>McArthur Highway, Barangay San Nicolas, Tarlac City, 2300 Tarlac, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_7dafe69615c8675f0b556825e0dbbba1.setContent(html_a6fd61610dfa5f74440a1a74b3dc7746);
+            
+        
+
+        marker_c40aed219b3bb397bff3750bc62df0a5.bindPopup(popup_7dafe69615c8675f0b556825e0dbbba1)
+        ;
+
+        
+    
+    
+                marker_c40aed219b3bb397bff3750bc62df0a5.setIcon(icon_ced67c4904df062dae62cb14d13f9175);
+            
+    
+            var marker_f41ade5c8dd882ee937a522e6b124f1a = L.marker(
+                [15.065627224713673, 120.65375518107167],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_cab6fc619fd5a2aaa22cf098e06e5980 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1c5986a1ddce353e34f1c518e748e659 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4104c7ef4bb912398a0c49420737b6b6 = $(`<div id="html_4104c7ef4bb912398a0c49420737b6b6" style="width: 100.0%; height: 100.0%;"><b>Mother Teresa of Calcutta Medical Center</b><br>3M83+7GV, Mac Arthur Hwy, Barangay, San Fernando, 2000 Pampanga, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_1c5986a1ddce353e34f1c518e748e659.setContent(html_4104c7ef4bb912398a0c49420737b6b6);
+            
+        
+
+        marker_f41ade5c8dd882ee937a522e6b124f1a.bindPopup(popup_1c5986a1ddce353e34f1c518e748e659)
+        ;
+
+        
+    
+    
+                marker_f41ade5c8dd882ee937a522e6b124f1a.setIcon(icon_cab6fc619fd5a2aaa22cf098e06e5980);
+            
+    
+            var marker_a0a4a5901c7558b45fc8109a3af1b947 = L.marker(
+                [15.096238537212123, 120.62428320953134],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_29f455d8aef59c58fde8389fc67d8e6b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_35ea7565ca1d8e994163a053b14dac3e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea45b8e443955323301cc4b88cc37a07 = $(`<div id="html_ea45b8e443955323301cc4b88cc37a07" style="width: 100.0%; height: 100.0%;"><b>Mount Carmel Cancer Center</b><br>3JWF+GPC, MacArthur Hwy, San Fernando, 2000 Pampanga, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_35ea7565ca1d8e994163a053b14dac3e.setContent(html_ea45b8e443955323301cc4b88cc37a07);
+            
+        
+
+        marker_a0a4a5901c7558b45fc8109a3af1b947.bindPopup(popup_35ea7565ca1d8e994163a053b14dac3e)
+        ;
+
+        
+    
+    
+                marker_a0a4a5901c7558b45fc8109a3af1b947.setIcon(icon_29f455d8aef59c58fde8389fc67d8e6b);
+            
+    
+            var marker_005351252a4f7d3beaf86b604ea37d2b = L.marker(
+                [14.96015263082665, 120.75940742996234],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_00be79796c84c47758626ba6ac9fce7e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c593c62456589a2e4bcb5942b7fd1d8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f7823f04c618a48add24a7887173ebba = $(`<div id="html_f7823f04c618a48add24a7887173ebba" style="width: 100.0%; height: 100.0%;"><b>Premier Medical Center</b><br>Km55 MacArthur Hwy, Apalit, 2016 Pampanga, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_c593c62456589a2e4bcb5942b7fd1d8e.setContent(html_f7823f04c618a48add24a7887173ebba);
+            
+        
+
+        marker_005351252a4f7d3beaf86b604ea37d2b.bindPopup(popup_c593c62456589a2e4bcb5942b7fd1d8e)
+        ;
+
+        
+    
+    
+                marker_005351252a4f7d3beaf86b604ea37d2b.setIcon(icon_00be79796c84c47758626ba6ac9fce7e);
+            
+    
+            var marker_c78faa5ac6fc9cc9c8df9db5890810b5 = L.marker(
+                [15.125360015621407, 120.59837993533196],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_68120ba7b427acf7b1861dfd796c2d39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea723772ca5c2b152a7eeddb11e7bd0c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5f0790641f3b17df96829be122876bd5 = $(`<div id="html_5f0790641f3b17df96829be122876bd5" style="width: 100.0%; height: 100.0%;"><b>Sacred Heart Medical Center</b><br>4HGX+594, R-9, Angeles, 2009 Pampanga, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_ea723772ca5c2b152a7eeddb11e7bd0c.setContent(html_5f0790641f3b17df96829be122876bd5);
+            
+        
+
+        marker_c78faa5ac6fc9cc9c8df9db5890810b5.bindPopup(popup_ea723772ca5c2b152a7eeddb11e7bd0c)
+        ;
+
+        
+    
+    
+                marker_c78faa5ac6fc9cc9c8df9db5890810b5.setIcon(icon_68120ba7b427acf7b1861dfd796c2d39);
+            
+    
+            var marker_c357c962e34082c1e47cac48d8819356 = L.marker(
+                [13.766747059792731, 121.06618607919887],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_9b1edbc63470634da1c4df98c9acb633 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_98f7dd8cf28926152068ef79119fc645 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_510565731d494bc47dd4ec323e86906d = $(`<div id="html_510565731d494bc47dd4ec323e86906d" style="width: 100.0%; height: 100.0%;"><b>Batangas Medical Center</b><br>Bihi Road, Kumintang Ibaba, Batangas City, Batangas, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_98f7dd8cf28926152068ef79119fc645.setContent(html_510565731d494bc47dd4ec323e86906d);
+            
+        
+
+        marker_c357c962e34082c1e47cac48d8819356.bindPopup(popup_98f7dd8cf28926152068ef79119fc645)
+        ;
+
+        
+    
+    
+                marker_c357c962e34082c1e47cac48d8819356.setIcon(icon_9b1edbc63470634da1c4df98c9acb633);
+            
+    
+            var marker_7fa45f355d128d972bce62495485077e = L.marker(
+                [14.206010598055846, 121.15182856208645],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_f24baab550d594fa5893ed7320211401 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_03cdf41c1b347bd26e5796169b19d5ae = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8572eeb98ae1f2f35ccccd8f8d86311e = $(`<div id="html_8572eeb98ae1f2f35ccccd8f8d86311e" style="width: 100.0%; height: 100.0%;"><b>Calamba Medical Center</b><br>Crossing, 26 Asian Highway, Calamba, 4027 Laguna, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_03cdf41c1b347bd26e5796169b19d5ae.setContent(html_8572eeb98ae1f2f35ccccd8f8d86311e);
+            
+        
+
+        marker_7fa45f355d128d972bce62495485077e.bindPopup(popup_03cdf41c1b347bd26e5796169b19d5ae)
+        ;
+
+        
+    
+    
+                marker_7fa45f355d128d972bce62495485077e.setIcon(icon_f24baab550d594fa5893ed7320211401);
+            
+    
+            var marker_f607148d2d83de8b9b0b478eacb0329a = L.marker(
+                [14.327112810355722, 120.94347021174735],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_94a54432a58810712f711c88987faa73 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_908e296361feddde747182fe3c07ba3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_818c258174094d2ab4d13b1f29fdfa38 = $(`<div id="html_818c258174094d2ab4d13b1f29fdfa38" style="width: 100.0%; height: 100.0%;"><b>De La Salle University Medical Center</b><br>Gov D. Mangubat St, Dasmariñas, 4114 Cavite, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_908e296361feddde747182fe3c07ba3c.setContent(html_818c258174094d2ab4d13b1f29fdfa38);
+            
+        
+
+        marker_f607148d2d83de8b9b0b478eacb0329a.bindPopup(popup_908e296361feddde747182fe3c07ba3c)
+        ;
+
+        
+    
+    
+                marker_f607148d2d83de8b9b0b478eacb0329a.setIcon(icon_94a54432a58810712f711c88987faa73);
+            
+    
+            var marker_3fe04458c3114f9f9324584d1b799dec = L.marker(
+                [14.177118571780401, 121.27261077735352],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_f442d01ad6cb794bfc6a7be04a01214b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d0b06e670f8272f5727d017e18854e3f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a5a5a3a2b2de5c90fe0dc343e753c92d = $(`<div id="html_a5a5a3a2b2de5c90fe0dc343e753c92d" style="width: 100.0%; height: 100.0%;"><b>Global Care Cancer Institute</b><br>57GF+X3H, Manila S Rd, Bay, Laguna, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_d0b06e670f8272f5727d017e18854e3f.setContent(html_a5a5a3a2b2de5c90fe0dc343e753c92d);
+            
+        
+
+        marker_3fe04458c3114f9f9324584d1b799dec.bindPopup(popup_d0b06e670f8272f5727d017e18854e3f)
+        ;
+
+        
+    
+    
+                marker_3fe04458c3114f9f9324584d1b799dec.setIcon(icon_f442d01ad6cb794bfc6a7be04a01214b);
+            
+    
+            var marker_706ab536fcfcab4ebaff6d48c8ec8024 = L.marker(
+                [13.94818671137726, 121.15694533872556],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_66d2d375f69e13555ebc9c4f37ecad07 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd80cb42c089870e8bc89cb1c5d91da8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7eb9deb932168a10020c750d446b9fec = $(`<div id="html_7eb9deb932168a10020c750d446b9fec" style="width: 100.0%; height: 100.0%;"><b>Lipa Medix Medical Center</b><br>W5X4+3Q8, President Jose P. Laurel Hwy, Lipa, Batangas, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_dd80cb42c089870e8bc89cb1c5d91da8.setContent(html_7eb9deb932168a10020c750d446b9fec);
+            
+        
+
+        marker_706ab536fcfcab4ebaff6d48c8ec8024.bindPopup(popup_dd80cb42c089870e8bc89cb1c5d91da8)
+        ;
+
+        
+    
+    
+                marker_706ab536fcfcab4ebaff6d48c8ec8024.setIcon(icon_66d2d375f69e13555ebc9c4f37ecad07);
+            
+    
+            var marker_fef30fe1313824a62fd0d6899391eba2 = L.marker(
+                [13.943586275083673, 121.15175102626459],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_6813a9bc81ecd28b6ae0667878aeeee8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4847b52807f07db993e236338998e88 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_45dc34bf5606848cdadebab37ae6d432 = $(`<div id="html_45dc34bf5606848cdadebab37ae6d432" style="width: 100.0%; height: 100.0%;"><b>Mary Mediatrix Medical Center</b><br>Medical Center, JP Laurel Highway, Mary Mediatrix, Lipa, 4217 Batangas, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_a4847b52807f07db993e236338998e88.setContent(html_45dc34bf5606848cdadebab37ae6d432);
+            
+        
+
+        marker_fef30fe1313824a62fd0d6899391eba2.bindPopup(popup_a4847b52807f07db993e236338998e88)
+        ;
+
+        
+    
+    
+                marker_fef30fe1313824a62fd0d6899391eba2.setIcon(icon_6813a9bc81ecd28b6ae0667878aeeee8);
+            
+    
+            var marker_130a6b11d789da67d41d7b5fa9bdb563 = L.marker(
+                [14.330379881329051, 121.08525456571577],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_004f0a10e6c42a7483e9d6fd950c880f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2b47c1e5f82226d06f1bfacb559a65e0 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4f4ecb10c602ac960a05009953f58db4 = $(`<div id="html_4f4ecb10c602ac960a05009953f58db4" style="width: 100.0%; height: 100.0%;"><b>Perpetual Help Medical Center - Binan</b><br>Manila South Road, Sto Niño, Biñan, Laguna, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_2b47c1e5f82226d06f1bfacb559a65e0.setContent(html_4f4ecb10c602ac960a05009953f58db4);
+            
+        
+
+        marker_130a6b11d789da67d41d7b5fa9bdb563.bindPopup(popup_2b47c1e5f82226d06f1bfacb559a65e0)
+        ;
+
+        
+    
+    
+                marker_130a6b11d789da67d41d7b5fa9bdb563.setIcon(icon_004f0a10e6c42a7483e9d6fd950c880f);
+            
+    
+            var marker_7ae5eb554c2226891ac3ee57aeb2d942 = L.marker(
+                [14.109092446602709, 121.14564945284849],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_c3f1508fadef7608b18af85e2b269b8a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1ca8df006a9e95d8ab9d7a8863b54fb6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_75a42d7710ad0218594216863fd7d9b5 = $(`<div id="html_75a42d7710ad0218594216863fd7d9b5" style="width: 100.0%; height: 100.0%;"><b>St Frances Cabrini Medical Center</b><br>President Jose P. Laurel Hwy, Santo Tomas, 4232 Batangas, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_1ca8df006a9e95d8ab9d7a8863b54fb6.setContent(html_75a42d7710ad0218594216863fd7d9b5);
+            
+        
+
+        marker_7ae5eb554c2226891ac3ee57aeb2d942.bindPopup(popup_1ca8df006a9e95d8ab9d7a8863b54fb6)
+        ;
+
+        
+    
+    
+                marker_7ae5eb554c2226891ac3ee57aeb2d942.setIcon(icon_c3f1508fadef7608b18af85e2b269b8a);
+            
+    
+            var marker_da9a2b106af037019fa6e5ec49a05340 = L.marker(
+                [13.62279194372351, 123.19871675406435],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_fc269017394ed76a44a6a9d4882a7a1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ed92ebf8d14bb90b2d068e0c320b70b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_95a11cedad8cef96941422d4750d68fe = $(`<div id="html_95a11cedad8cef96941422d4750d68fe" style="width: 100.0%; height: 100.0%;"><b>Bicol Medical Center</b><br>BMC Rd., Concepcion Pequeña, Naga City, Camarines Sur 4400, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_ed92ebf8d14bb90b2d068e0c320b70b5.setContent(html_95a11cedad8cef96941422d4750d68fe);
+            
+        
+
+        marker_da9a2b106af037019fa6e5ec49a05340.bindPopup(popup_ed92ebf8d14bb90b2d068e0c320b70b5)
+        ;
+
+        
+    
+    
+                marker_da9a2b106af037019fa6e5ec49a05340.setIcon(icon_fc269017394ed76a44a6a9d4882a7a1b);
+            
+    
+            var marker_c5876e1066b95879cc6601190312ce8c = L.marker(
+                [13.146895674497797, 123.7246354676783],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_276c0cad69bd5fd56bfe7a7ae8a225a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f8772a39e5cd9f6175886f44d8781dd4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3937e1d18e4d6a246af1f2f4c2ba08c1 = $(`<div id="html_3937e1d18e4d6a246af1f2f4c2ba08c1" style="width: 100.0%; height: 100.0%;"><b>Bicol Regional Hospital and Medical Center</b><br>4PWF+RV4, Legazpi City, Albay, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_f8772a39e5cd9f6175886f44d8781dd4.setContent(html_3937e1d18e4d6a246af1f2f4c2ba08c1);
+            
+        
+
+        marker_c5876e1066b95879cc6601190312ce8c.bindPopup(popup_f8772a39e5cd9f6175886f44d8781dd4)
+        ;
+
+        
+    
+    
+                marker_c5876e1066b95879cc6601190312ce8c.setIcon(icon_276c0cad69bd5fd56bfe7a7ae8a225a8);
+            
+    
+            var marker_c38ead6b305e479e283d7d28ff76bfec = L.marker(
+                [10.702610983060685, 122.55228881169671],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_2ca24a2a9af23570b3b7ae60f446664b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b2d430357ce1e0a1f3c5aa74f22ba9bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd25e1c91077333162806733d9f0ec41 = $(`<div id="html_dd25e1c91077333162806733d9f0ec41" style="width: 100.0%; height: 100.0%;"><b>Medicus Medical Center</b><br>Dra. Rizalina V. Bernardo Avenue, Mandurriao, Iloilo City, 5000 Iloilo, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_b2d430357ce1e0a1f3c5aa74f22ba9bd.setContent(html_dd25e1c91077333162806733d9f0ec41);
+            
+        
+
+        marker_c38ead6b305e479e283d7d28ff76bfec.bindPopup(popup_b2d430357ce1e0a1f3c5aa74f22ba9bd)
+        ;
+
+        
+    
+    
+                marker_c38ead6b305e479e283d7d28ff76bfec.setIcon(icon_2ca24a2a9af23570b3b7ae60f446664b);
+            
+    
+            var marker_2aae422ff0d54a84a0ea821a676c6f95 = L.marker(
+                [10.682872638762188, 122.9578938771667],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_f45681b60c4fb1149217c92381c1966d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_06c9603cadf6cfc9cdf0de6c142a673b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4abb6ffcd31a28c35b39d9c763121fc2 = $(`<div id="html_4abb6ffcd31a28c35b39d9c763121fc2" style="width: 100.0%; height: 100.0%;"><b>Riverside Medical Center</b><br>BS Aquino Dr, Bacolod, 6100 Negros Occidental, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_06c9603cadf6cfc9cdf0de6c142a673b.setContent(html_4abb6ffcd31a28c35b39d9c763121fc2);
+            
+        
+
+        marker_2aae422ff0d54a84a0ea821a676c6f95.bindPopup(popup_06c9603cadf6cfc9cdf0de6c142a673b)
+        ;
+
+        
+    
+    
+                marker_2aae422ff0d54a84a0ea821a676c6f95.setIcon(icon_f45681b60c4fb1149217c92381c1966d);
+            
+    
+            var marker_543e024204b162944f8ec88c6645e71f = L.marker(
+                [10.702199545681115, 122.56674259854009],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_97740982b7ea4aa0aac33366d3f93323 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77b0f6d34277fe553cc9c211f7a116ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1c7caf840a6e08e6de66e13033ceeddb = $(`<div id="html_1c7caf840a6e08e6de66e13033ceeddb" style="width: 100.0%; height: 100.0%;"><b>St Paul’s Hospital</b><br>Saint Paul's Hospital, General Luna St, Iloilo City Proper, Iloilo City, 5000 Iloilo, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_77b0f6d34277fe553cc9c211f7a116ea.setContent(html_1c7caf840a6e08e6de66e13033ceeddb);
+            
+        
+
+        marker_543e024204b162944f8ec88c6645e71f.bindPopup(popup_77b0f6d34277fe553cc9c211f7a116ea)
+        ;
+
+        
+    
+    
+                marker_543e024204b162944f8ec88c6645e71f.setIcon(icon_97740982b7ea4aa0aac33366d3f93323);
+            
+    
+            var marker_32243a0882fb20fd50025890fcca02e1 = L.marker(
+                [10.715980252027931, 122.56084623839371],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_ad1446b6bb9445e908b75ff030f945ab = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3b09f722c2209527e50119e7fb17d058 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_71412ff9b53708d2111aa262424fa990 = $(`<div id="html_71412ff9b53708d2111aa262424fa990" style="width: 100.0%; height: 100.0%;"><b>West Visayas State University Medical Center</b><br>PH86+CFH, E Lopez St, Jaro, Iloilo City, 5000 Iloilo, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_3b09f722c2209527e50119e7fb17d058.setContent(html_71412ff9b53708d2111aa262424fa990);
+            
+        
+
+        marker_32243a0882fb20fd50025890fcca02e1.bindPopup(popup_3b09f722c2209527e50119e7fb17d058)
+        ;
+
+        
+    
+    
+                marker_32243a0882fb20fd50025890fcca02e1.setIcon(icon_ad1446b6bb9445e908b75ff030f945ab);
+            
+    
+            var marker_6323c5eb8a4e643a08bc2bf444eaad05 = L.marker(
+                [10.309802911544619, 123.89118737762794],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_f54784220b07e3670467cd123c428705 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b96f2b5dd94da533a4de9bf3778a210 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0a4f6a661b8714e0ece2bc6fc33d9651 = $(`<div id="html_0a4f6a661b8714e0ece2bc6fc33d9651" style="width: 100.0%; height: 100.0%;"><b>Chong Hua Hospital</b><br>8V5R+F7Q, C. Rodriguez Street, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_1b96f2b5dd94da533a4de9bf3778a210.setContent(html_0a4f6a661b8714e0ece2bc6fc33d9651);
+            
+        
+
+        marker_6323c5eb8a4e643a08bc2bf444eaad05.bindPopup(popup_1b96f2b5dd94da533a4de9bf3778a210)
+        ;
+
+        
+    
+    
+                marker_6323c5eb8a4e643a08bc2bf444eaad05.setIcon(icon_f54784220b07e3670467cd123c428705);
+            
+    
+            var marker_7b1e6641a3e4f8cc86794be792829625 = L.marker(
+                [10.314371761004221, 123.89190277975638],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_c225c86f36305701a542f37d5ba58392 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_eefd4551b2f14c4b5c122dff5459211f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_57bc4bc7553f2bc1da9a2796df8aab41 = $(`<div id="html_57bc4bc7553f2bc1da9a2796df8aab41" style="width: 100.0%; height: 100.0%;"><b>Cebu Doctors' University Hospital</b><br>Osmeña Blvd, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_eefd4551b2f14c4b5c122dff5459211f.setContent(html_57bc4bc7553f2bc1da9a2796df8aab41);
+            
+        
+
+        marker_7b1e6641a3e4f8cc86794be792829625.bindPopup(popup_eefd4551b2f14c4b5c122dff5459211f)
+        ;
+
+        
+    
+    
+                marker_7b1e6641a3e4f8cc86794be792829625.setIcon(icon_c225c86f36305701a542f37d5ba58392);
+            
+    
+            var marker_412898b6f1072bfb2d9904efa2e9168d = L.marker(
+                [10.314743017397351, 123.90052805163381],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_5343087699920caafb3a84919b800e92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f768fd371311f0074184ca6f6303891 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b6be8d30a72a1d3f322cc5267bb1b844 = $(`<div id="html_b6be8d30a72a1d3f322cc5267bb1b844" style="width: 100.0%; height: 100.0%;"><b>Perpetual Succour Hospital</b><br>Gorordo Ave, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_0f768fd371311f0074184ca6f6303891.setContent(html_b6be8d30a72a1d3f322cc5267bb1b844);
+            
+        
+
+        marker_412898b6f1072bfb2d9904efa2e9168d.bindPopup(popup_0f768fd371311f0074184ca6f6303891)
+        ;
+
+        
+    
+    
+                marker_412898b6f1072bfb2d9904efa2e9168d.setIcon(icon_5343087699920caafb3a84919b800e92);
+            
+    
+            var marker_ad158e570c21a61e78739ec2633c7ebc = L.marker(
+                [6.9233651293580065, 122.07912855494307],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_a4bcffe4a88b2c39f731530991f6ac12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_43b9cafdd013c92f3118d4a1844992de = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3ef922391fec01db1bcf558056026bf0 = $(`<div id="html_3ef922391fec01db1bcf558056026bf0" style="width: 100.0%; height: 100.0%;"><b>West Metro Medical Center</b><br>Veterans Ave Ext., Extension, Zamboanga, 7000 Zamboanga del Sur, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_43b9cafdd013c92f3118d4a1844992de.setContent(html_3ef922391fec01db1bcf558056026bf0);
+            
+        
+
+        marker_ad158e570c21a61e78739ec2633c7ebc.bindPopup(popup_43b9cafdd013c92f3118d4a1844992de)
+        ;
+
+        
+    
+    
+                marker_ad158e570c21a61e78739ec2633c7ebc.setIcon(icon_a4bcffe4a88b2c39f731530991f6ac12);
+            
+    
+            var marker_8e83e0f52c89a1f977cb783bf4006988 = L.marker(
+                [6.907024270226723, 122.08090254522553],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_60dce83d6c1d69ede62fd87f4251b2f1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84dd5002bb98e9459d0b1031deb19658 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e567f594d7126f3b0e6e369f8cf95961 = $(`<div id="html_e567f594d7126f3b0e6e369f8cf95961" style="width: 100.0%; height: 100.0%;"><b>Zamboanga City Medical Center</b><br>Veterans Avenue, Zamboanga City, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_84dd5002bb98e9459d0b1031deb19658.setContent(html_e567f594d7126f3b0e6e369f8cf95961);
+            
+        
+
+        marker_8e83e0f52c89a1f977cb783bf4006988.bindPopup(popup_84dd5002bb98e9459d0b1031deb19658)
+        ;
+
+        
+    
+    
+                marker_8e83e0f52c89a1f977cb783bf4006988.setIcon(icon_60dce83d6c1d69ede62fd87f4251b2f1);
+            
+    
+            var marker_e9996ce2def2d10d292a37243e4f3f59 = L.marker(
+                [8.475515460840791, 124.65479442089321],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_d5b14deb4ba5d0d0ebb2fb2a1f50b908 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c56b6568fdefdd9014a896312b23caa4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3e3a86deebd2e3fb6df03e4b93c021e9 = $(`<div id="html_3e3a86deebd2e3fb6df03e4b93c021e9" style="width: 100.0%; height: 100.0%;"><b>Maria Reyna - Xavier University Hospital</b><br>FMG3+6XV, Hayes St, Cagayan de Oro, 9000 Misamis Oriental, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_c56b6568fdefdd9014a896312b23caa4.setContent(html_3e3a86deebd2e3fb6df03e4b93c021e9);
+            
+        
+
+        marker_e9996ce2def2d10d292a37243e4f3f59.bindPopup(popup_c56b6568fdefdd9014a896312b23caa4)
+        ;
+
+        
+    
+    
+                marker_e9996ce2def2d10d292a37243e4f3f59.setIcon(icon_d5b14deb4ba5d0d0ebb2fb2a1f50b908);
+            
+    
+            var marker_b1e04dd18eee3fa9eecd04d40c6f86a6 = L.marker(
+                [8.485574661433112, 124.64961032886873],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_01ac859c253787c87d8939ebf0e11db4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_276f25d998b88e73cdc29e82c7673124 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a828ea864c054b3afec8a8107b346e56 = $(`<div id="html_a828ea864c054b3afec8a8107b346e56" style="width: 100.0%; height: 100.0%;"><b>Northern Mindanao Medical Center</b><br>FJPX+9Q4, Capitol Rd, Cagayan de Oro, 9000 Misamis Oriental, Philippines<br>Services: Basic RT</div>`)[0];
+                popup_276f25d998b88e73cdc29e82c7673124.setContent(html_a828ea864c054b3afec8a8107b346e56);
+            
+        
+
+        marker_b1e04dd18eee3fa9eecd04d40c6f86a6.bindPopup(popup_276f25d998b88e73cdc29e82c7673124)
+        ;
+
+        
+    
+    
+                marker_b1e04dd18eee3fa9eecd04d40c6f86a6.setIcon(icon_01ac859c253787c87d8939ebf0e11db4);
+            
+    
+            var marker_d0b672d5ba9b065c61ea507aec346eef = L.marker(
+                [7.07009574401395, 125.60444475057707],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_d2ecd9b3f6a875b7ce8c69ce1974c07d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f85a98133a34f674bfb24da9c57034f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7b1d1a1d334559227ceec740221deaeb = $(`<div id="html_7b1d1a1d334559227ceec740221deaeb" style="width: 100.0%; height: 100.0%;"><b>Davao Doctors Hospital</b><br>118 Elpidio Quirino Ave, Poblacion District, Davao City, 8000 Davao del Sur, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_7f85a98133a34f674bfb24da9c57034f.setContent(html_7b1d1a1d334559227ceec740221deaeb);
+            
+        
+
+        marker_d0b672d5ba9b065c61ea507aec346eef.bindPopup(popup_7f85a98133a34f674bfb24da9c57034f)
+        ;
+
+        
+    
+    
+                marker_d0b672d5ba9b065c61ea507aec346eef.setIcon(icon_d2ecd9b3f6a875b7ce8c69ce1974c07d);
+            
+    
+            var marker_20002d25d72dc92b3f0b33d6047e2fb5 = L.marker(
+                [7.42204125798825, 125.82883191351523],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_41495372702b3d333c215b8015de4076 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_89c29d9c65878b0c76f87f621ceed9c7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e9891cfe1aa9a930dae04623eab643bb = $(`<div id="html_e9891cfe1aa9a930dae04623eab643bb" style="width: 100.0%; height: 100.0%;"><b>Davao Regional Medical Center</b><br>CRCH+VGX, Tagum, 8100 Davao del Norte, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_89c29d9c65878b0c76f87f621ceed9c7.setContent(html_e9891cfe1aa9a930dae04623eab643bb);
+            
+        
+
+        marker_20002d25d72dc92b3f0b33d6047e2fb5.bindPopup(popup_89c29d9c65878b0c76f87f621ceed9c7)
+        ;
+
+        
+    
+    
+                marker_20002d25d72dc92b3f0b33d6047e2fb5.setIcon(icon_41495372702b3d333c215b8015de4076);
+            
+    
+            var marker_bb40d7ad0b09ceecf774282b660d20d3 = L.marker(
+                [7.098282042706368, 125.61988074384034],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_fc6cd60d4ade9dbd9422e149a5a44120 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6b40d3e89ac35258510ea61bb1e0aa40 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e0e03d6a896fae6f261966174ded0693 = $(`<div id="html_e0e03d6a896fae6f261966174ded0693" style="width: 100.0%; height: 100.0%;"><b>Southern Philippines Medical Center</b><br>Southern Philippines Medical Center, J.P. Laurel Ave, Bajada, Davao City, 8000 Davao del Sur, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_6b40d3e89ac35258510ea61bb1e0aa40.setContent(html_e0e03d6a896fae6f261966174ded0693);
+            
+        
+
+        marker_bb40d7ad0b09ceecf774282b660d20d3.bindPopup(popup_6b40d3e89ac35258510ea61bb1e0aa40)
+        ;
+
+        
+    
+    
+                marker_bb40d7ad0b09ceecf774282b660d20d3.setIcon(icon_fc6cd60d4ade9dbd9422e149a5a44120);
+            
+    
+            var marker_9e9573af58bb0426000273fb1de0bb07 = L.marker(
+                [7.200044296620431, 124.23667603441295],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_c662e08e86e6f6f1c2dea30735091a12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e7b3c6724c8fe1cb9ad88cffad6d2a1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2da04fd402be6d3968ea8ff15249a4c9 = $(`<div id="html_2da04fd402be6d3968ea8ff15249a4c9" style="width: 100.0%; height: 100.0%;"><b>Cotabato Regional Medical Center</b><br>10 Sinsuat Ave, Cotabato City, 9600 Maguindanao, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_3e7b3c6724c8fe1cb9ad88cffad6d2a1.setContent(html_2da04fd402be6d3968ea8ff15249a4c9);
+            
+        
+
+        marker_9e9573af58bb0426000273fb1de0bb07.bindPopup(popup_3e7b3c6724c8fe1cb9ad88cffad6d2a1)
+        ;
+
+        
+    
+    
+                marker_9e9573af58bb0426000273fb1de0bb07.setIcon(icon_c662e08e86e6f6f1c2dea30735091a12);
+            
+    
+            var marker_0e1d9f76e9680700e5462a2f3f694f88 = L.marker(
+                [6.12028583215008, 125.17835380707777],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_4be131309776d019892fc0130de1e090 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93d4d62c3cacd13b9e4804afe7d11772 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_7e810d727039dd29ad1863349d42e106 = $(`<div id="html_7e810d727039dd29ad1863349d42e106" style="width: 100.0%; height: 100.0%;"><b>General Santos Doctors Hospital</b><br>459H+QCV, General Santos City, South Cotabato, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_93d4d62c3cacd13b9e4804afe7d11772.setContent(html_7e810d727039dd29ad1863349d42e106);
+            
+        
+
+        marker_0e1d9f76e9680700e5462a2f3f694f88.bindPopup(popup_93d4d62c3cacd13b9e4804afe7d11772)
+        ;
+
+        
+    
+    
+                marker_0e1d9f76e9680700e5462a2f3f694f88.setIcon(icon_4be131309776d019892fc0130de1e090);
+            
+    
+            var marker_6b1e4bc1b4603535fd9ec07c2748426a = L.marker(
+                [6.118402652100175, 125.17991165398162],
+                {
+}
+            ).addTo(feature_group_4c697c883206d066d53e6f89c1d3f68b);
+        
+    
+            var icon_c7f8f3ec3e9c63e798accd9cf0ec3f6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fcfc706377b26f5e37b4deb63efc55c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_521e0f14393b3e9b64f0b57fb8c2f176 = $(`<div id="html_521e0f14393b3e9b64f0b57fb8c2f176" style="width: 100.0%; height: 100.0%;"><b>St. Elizabeth Hospital</b><br>Santiago Blvd, National Highway, Cor. Santiago Blvd, General Santos City, 9500 South Cotabato<br>Services: Basic RT</div>`)[0];
+                popup_fcfc706377b26f5e37b4deb63efc55c1.setContent(html_521e0f14393b3e9b64f0b57fb8c2f176);
+            
+        
+
+        marker_6b1e4bc1b4603535fd9ec07c2748426a.bindPopup(popup_fcfc706377b26f5e37b4deb63efc55c1)
+        ;
+
+        
+    
+    
+                marker_6b1e4bc1b4603535fd9ec07c2748426a.setIcon(icon_c7f8f3ec3e9c63e798accd9cf0ec3f6f);
+            
+    
+            feature_group_4c697c883206d066d53e6f89c1d3f68b.addTo(map_993e253ff3dd53932953dbb2bb89f25b);
+        
+    
+            var feature_group_5f33e7d9845078de081a9a60dbc7757f = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_f4eaae95f14cc03758b5c9cc800aa8ea = L.marker(
+                [14.41343323589265, 121.04361012848864],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_b25da4c403bc071ebce38125ab5045be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab7da05187e06a3d8affde2fa872cb27 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8841807f7ad609ce34b9640f995b50cb = $(`<div id="html_8841807f7ad609ce34b9640f995b50cb" style="width: 100.0%; height: 100.0%;"><b>Asian Hospital</b><br>220 East Avenue, Filinvest City, Alabang, Muntinlupa, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_ab7da05187e06a3d8affde2fa872cb27.setContent(html_8841807f7ad609ce34b9640f995b50cb);
+            
+        
+
+        marker_f4eaae95f14cc03758b5c9cc800aa8ea.bindPopup(popup_ab7da05187e06a3d8affde2fa872cb27)
+        ;
+
+        
+    
+    
+                marker_f4eaae95f14cc03758b5c9cc800aa8ea.setIcon(icon_b25da4c403bc071ebce38125ab5045be);
+            
+    
+            var marker_666cf5ffa3e61328514ca0097c1a5b9d = L.marker(
+                [14.62305602072567, 121.02384373404237],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_4adbc2a525d5423be0969d119a72c7e3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_de4f25c9ebf4754cfafd46b4192493bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_01b45d0727a8d0b8d4af3ff0ab91744f = $(`<div id="html_01b45d0727a8d0b8d4af3ff0ab91744f" style="width: 100.0%; height: 100.0%;"><b>Cardinal Santos Medical Center</b><br>140 E. Rodriguez Sr. Avenue, San Juan, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_de4f25c9ebf4754cfafd46b4192493bd.setContent(html_01b45d0727a8d0b8d4af3ff0ab91744f);
+            
+        
+
+        marker_666cf5ffa3e61328514ca0097c1a5b9d.bindPopup(popup_de4f25c9ebf4754cfafd46b4192493bd)
+        ;
+
+        
+    
+    
+                marker_666cf5ffa3e61328514ca0097c1a5b9d.setIcon(icon_4adbc2a525d5423be0969d119a72c7e3);
+            
+    
+            var marker_797425c9afd570f4b4cbbefc5677240c = L.marker(
+                [14.502801702668364, 121.04841520988423],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_221d23ef0b2e6da2e5dd54b44b5e5f94 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c9b672eb0e639b1a1bcdf16c1b6bd4bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_43cbc69834e8d1d1e574676a4f9fba94 = $(`<div id="html_43cbc69834e8d1d1e574676a4f9fba94" style="width: 100.0%; height: 100.0%;"><b>Healthway Cancer Care Hospital</b><br>ARCA South, South Union Dr, Taguig, 1630 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_c9b672eb0e639b1a1bcdf16c1b6bd4bd.setContent(html_43cbc69834e8d1d1e574676a4f9fba94);
+            
+        
+
+        marker_797425c9afd570f4b4cbbefc5677240c.bindPopup(popup_c9b672eb0e639b1a1bcdf16c1b6bd4bd)
+        ;
+
+        
+    
+    
+                marker_797425c9afd570f4b4cbbefc5677240c.setIcon(icon_221d23ef0b2e6da2e5dd54b44b5e5f94);
+            
+    
+            var marker_764ce882e18339c2303ee4ea27ba4156 = L.marker(
+                [14.648267666437293, 121.04496683676649],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_3850eb6df3d5de1b0418582566680646 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7113c106457449970fc2945222f722a4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_723ffbb840d9cbb28a598989d75047f4 = $(`<div id="html_723ffbb840d9cbb28a598989d75047f4" style="width: 100.0%; height: 100.0%;"><b>Lung Center of the Philippines</b><br>Quirino Avenue, Quezon City, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_7113c106457449970fc2945222f722a4.setContent(html_723ffbb840d9cbb28a598989d75047f4);
+            
+        
+
+        marker_764ce882e18339c2303ee4ea27ba4156.bindPopup(popup_7113c106457449970fc2945222f722a4)
+        ;
+
+        
+    
+    
+                marker_764ce882e18339c2303ee4ea27ba4156.setIcon(icon_3850eb6df3d5de1b0418582566680646);
+            
+    
+            var marker_94cbd560cc63344b28a810b735a92a56 = L.marker(
+                [14.559058058170336, 121.01480267712553],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_849ad26888976fd7a6fec4c1c8d692d8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0bd25f38ae0d97d2ef7b8ea9051b32bd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d440999e172f2b5074d764114f85b32b = $(`<div id="html_d440999e172f2b5074d764114f85b32b" style="width: 100.0%; height: 100.0%;"><b>Makati Medical Center</b><br>2 Amorsolo Street, Makati, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_0bd25f38ae0d97d2ef7b8ea9051b32bd.setContent(html_d440999e172f2b5074d764114f85b32b);
+            
+        
+
+        marker_94cbd560cc63344b28a810b735a92a56.bindPopup(popup_0bd25f38ae0d97d2ef7b8ea9051b32bd)
+        ;
+
+        
+    
+    
+                marker_94cbd560cc63344b28a810b735a92a56.setIcon(icon_849ad26888976fd7a6fec4c1c8d692d8);
+            
+    
+            var marker_7d616271e350219b5cc1c807ef9e9efe = L.marker(
+                [14.581786946488517, 120.98295985402949],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_2635a5cd5301965ae898679aed2c3f39 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f265d0a9e9726273e1371b2faf541ccf = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d2a10fc6a4ebbca8ef3541de993eab99 = $(`<div id="html_d2a10fc6a4ebbca8ef3541de993eab99" style="width: 100.0%; height: 100.0%;"><b>Manila Doctors Hospital</b><br>667 United Nations Ave, Ermita, Manila, 1000 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_f265d0a9e9726273e1371b2faf541ccf.setContent(html_d2a10fc6a4ebbca8ef3541de993eab99);
+            
+        
+
+        marker_7d616271e350219b5cc1c807ef9e9efe.bindPopup(popup_f265d0a9e9726273e1371b2faf541ccf)
+        ;
+
+        
+    
+    
+                marker_7d616271e350219b5cc1c807ef9e9efe.setIcon(icon_2635a5cd5301965ae898679aed2c3f39);
+            
+    
+            var marker_39df13bf33332877d4b6aedf6deea61f = L.marker(
+                [14.577428048635355, 120.98561542524331],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_fd309146d2011c43851d5946de63f89e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d5a67f1f3f61dccbb93db7beac72097 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_60b0c7cfb9064b19ec68ae5c0340111f = $(`<div id="html_60b0c7cfb9064b19ec68ae5c0340111f" style="width: 100.0%; height: 100.0%;"><b>Philippine General Hospital</b><br>Taft Avenue, Ermita, Manila, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_0d5a67f1f3f61dccbb93db7beac72097.setContent(html_60b0c7cfb9064b19ec68ae5c0340111f);
+            
+        
+
+        marker_39df13bf33332877d4b6aedf6deea61f.bindPopup(popup_0d5a67f1f3f61dccbb93db7beac72097)
+        ;
+
+        
+    
+    
+                marker_39df13bf33332877d4b6aedf6deea61f.setIcon(icon_fd309146d2011c43851d5946de63f89e);
+            
+    
+            var marker_84df964ae230451a67944ce91baeab13 = L.marker(
+                [14.554966540797807, 121.04822128106332],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_d7c1fab9888c6c5cd9f53b953ec06ad3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce00a201f81d26701afb1349d2d63547 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_78f9edf09a56bf6349580a0c684500c6 = $(`<div id="html_78f9edf09a56bf6349580a0c684500c6" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Global City</b><br>26th Street (corner McKinley Parkway), Bonifacio Global City, Taguig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_ce00a201f81d26701afb1349d2d63547.setContent(html_78f9edf09a56bf6349580a0c684500c6);
+            
+        
+
+        marker_84df964ae230451a67944ce91baeab13.bindPopup(popup_ce00a201f81d26701afb1349d2d63547)
+        ;
+
+        
+    
+    
+                marker_84df964ae230451a67944ce91baeab13.setIcon(icon_d7c1fab9888c6c5cd9f53b953ec06ad3);
+            
+    
+            var marker_ed6640737ae741275dfb8ad2724eb447 = L.marker(
+                [14.622327930192524, 121.023379653053],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_df8cbf717a2662c2cdd3a600ddaecf49 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b287d61c50548acbfba9fc1984fb22d7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_88b4351fcfbfc68c7acb5565ca296cb0 = $(`<div id="html_88b4351fcfbfc68c7acb5565ca296cb0" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Quezon City</b><br>279 E. Rodriguez Sr. Avenue, Quezon City, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_b287d61c50548acbfba9fc1984fb22d7.setContent(html_88b4351fcfbfc68c7acb5565ca296cb0);
+            
+        
+
+        marker_ed6640737ae741275dfb8ad2724eb447.bindPopup(popup_b287d61c50548acbfba9fc1984fb22d7)
+        ;
+
+        
+    
+    
+                marker_ed6640737ae741275dfb8ad2724eb447.setIcon(icon_df8cbf717a2662c2cdd3a600ddaecf49);
+            
+    
+            var marker_dc2d553a08b7bd3f818e7bf63c44302f = L.marker(
+                [14.589931028416567, 121.06898176428321],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_25d050583aff84fc5db171a740b3920b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a0c250d82304857b3e6bbdab17e19bf1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_db77a9b0ea60a9dded2d8003a7d66a5c = $(`<div id="html_db77a9b0ea60a9dded2d8003a7d66a5c" style="width: 100.0%; height: 100.0%;"><b>The Medical City</b><br>Ortigas Avenue, Pasig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_a0c250d82304857b3e6bbdab17e19bf1.setContent(html_db77a9b0ea60a9dded2d8003a7d66a5c);
+            
+        
+
+        marker_dc2d553a08b7bd3f818e7bf63c44302f.bindPopup(popup_a0c250d82304857b3e6bbdab17e19bf1)
+        ;
+
+        
+    
+    
+                marker_dc2d553a08b7bd3f818e7bf63c44302f.setIcon(icon_25d050583aff84fc5db171a740b3920b);
+            
+    
+            var marker_a7179ad71167a6f4576f7473fa4f7b06 = L.marker(
+                [14.612536333783906, 120.98945861375576],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_fabb8241dcba1aa334b4bfb8b6b26410 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9779724d409f5f4d76fb26a2df09ff10 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2c000f3db97e3c2a8911c6717753b79e = $(`<div id="html_2c000f3db97e3c2a8911c6717753b79e" style="width: 100.0%; height: 100.0%;"><b>University of Santo Tomas Hospital</b><br>España Blvd, Sampaloc, Manila, 1015 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_9779724d409f5f4d76fb26a2df09ff10.setContent(html_2c000f3db97e3c2a8911c6717753b79e);
+            
+        
+
+        marker_a7179ad71167a6f4576f7473fa4f7b06.bindPopup(popup_9779724d409f5f4d76fb26a2df09ff10)
+        ;
+
+        
+    
+    
+                marker_a7179ad71167a6f4576f7473fa4f7b06.setIcon(icon_fabb8241dcba1aa334b4bfb8b6b26410);
+            
+    
+            var marker_8d7c7ced553bb13b8c163ce535b86554 = L.marker(
+                [15.065627224713673, 120.65375518107167],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_135a3be76b367a4ea4d042ec1681fc27 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d44aad70b9f17db0ad85d9571035f450 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_58f5ea03a7284cb18fef5b8b9900af7a = $(`<div id="html_58f5ea03a7284cb18fef5b8b9900af7a" style="width: 100.0%; height: 100.0%;"><b>Mother Teresa of Calcutta Medical Center</b><br>3M83+7GV, Mac Arthur Hwy, Barangay, San Fernando, 2000 Pampanga, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_d44aad70b9f17db0ad85d9571035f450.setContent(html_58f5ea03a7284cb18fef5b8b9900af7a);
+            
+        
+
+        marker_8d7c7ced553bb13b8c163ce535b86554.bindPopup(popup_d44aad70b9f17db0ad85d9571035f450)
+        ;
+
+        
+    
+    
+                marker_8d7c7ced553bb13b8c163ce535b86554.setIcon(icon_135a3be76b367a4ea4d042ec1681fc27);
+            
+    
+            var marker_13d947698bb3c3bb2374f70a9f8ea690 = L.marker(
+                [15.096238537212123, 120.62428320953134],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_18217220d8d51ac8aea1d2c8300c14e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b74f2a1a39fd7f6b9f348a50f259402a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dd01c3f1cf641e90fef2378528c93a9a = $(`<div id="html_dd01c3f1cf641e90fef2378528c93a9a" style="width: 100.0%; height: 100.0%;"><b>Mount Carmel Cancer Center</b><br>3JWF+GPC, MacArthur Hwy, San Fernando, 2000 Pampanga, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_b74f2a1a39fd7f6b9f348a50f259402a.setContent(html_dd01c3f1cf641e90fef2378528c93a9a);
+            
+        
+
+        marker_13d947698bb3c3bb2374f70a9f8ea690.bindPopup(popup_b74f2a1a39fd7f6b9f348a50f259402a)
+        ;
+
+        
+    
+    
+                marker_13d947698bb3c3bb2374f70a9f8ea690.setIcon(icon_18217220d8d51ac8aea1d2c8300c14e7);
+            
+    
+            var marker_51478db4550f51688946c50ebe03fcf1 = L.marker(
+                [13.94818671137726, 121.15694533872556],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_23cf1443137a1f08b89f0aa3eebc819b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7f40acb527317444bfc253a348ccceb8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b27015b88f6210560646c493420fda8c = $(`<div id="html_b27015b88f6210560646c493420fda8c" style="width: 100.0%; height: 100.0%;"><b>Lipa Medix Medical Center</b><br>W5X4+3Q8, President Jose P. Laurel Hwy, Lipa, Batangas, Philippines<br>Services: Basic RT, Advanced Techniques</div>`)[0];
+                popup_7f40acb527317444bfc253a348ccceb8.setContent(html_b27015b88f6210560646c493420fda8c);
+            
+        
+
+        marker_51478db4550f51688946c50ebe03fcf1.bindPopup(popup_7f40acb527317444bfc253a348ccceb8)
+        ;
+
+        
+    
+    
+                marker_51478db4550f51688946c50ebe03fcf1.setIcon(icon_23cf1443137a1f08b89f0aa3eebc819b);
+            
+    
+            var marker_35c284f7fde89fc4f2ac2907af7c4d16 = L.marker(
+                [10.309802911544619, 123.89118737762794],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_9af03d5caefd8c744e9ae17814c4e144 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_afbea59eb96d4ec0ad41aaee7b16ec21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_09f643aead3e9c558bd611b86a27b297 = $(`<div id="html_09f643aead3e9c558bd611b86a27b297" style="width: 100.0%; height: 100.0%;"><b>Chong Hua Hospital</b><br>8V5R+F7Q, C. Rodriguez Street, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_afbea59eb96d4ec0ad41aaee7b16ec21.setContent(html_09f643aead3e9c558bd611b86a27b297);
+            
+        
+
+        marker_35c284f7fde89fc4f2ac2907af7c4d16.bindPopup(popup_afbea59eb96d4ec0ad41aaee7b16ec21)
+        ;
+
+        
+    
+    
+                marker_35c284f7fde89fc4f2ac2907af7c4d16.setIcon(icon_9af03d5caefd8c744e9ae17814c4e144);
+            
+    
+            var marker_85871d7bf8f4bba408f36577f6aaf0de = L.marker(
+                [7.07009574401395, 125.60444475057707],
+                {
+}
+            ).addTo(feature_group_5f33e7d9845078de081a9a60dbc7757f);
+        
+    
+            var icon_68c19c23cfc59ffc4a42e0c246ad5755 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_00dc55700ef2fe2563ecea56414d439d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_aeab4a0b6bf0729de29142dfe148f60d = $(`<div id="html_aeab4a0b6bf0729de29142dfe148f60d" style="width: 100.0%; height: 100.0%;"><b>Davao Doctors Hospital</b><br>118 Elpidio Quirino Ave, Poblacion District, Davao City, 8000 Davao del Sur, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_00dc55700ef2fe2563ecea56414d439d.setContent(html_aeab4a0b6bf0729de29142dfe148f60d);
+            
+        
+
+        marker_85871d7bf8f4bba408f36577f6aaf0de.bindPopup(popup_00dc55700ef2fe2563ecea56414d439d)
+        ;
+
+        
+    
+    
+                marker_85871d7bf8f4bba408f36577f6aaf0de.setIcon(icon_68c19c23cfc59ffc4a42e0c246ad5755);
+            
+    
+            feature_group_5f33e7d9845078de081a9a60dbc7757f.addTo(map_993e253ff3dd53932953dbb2bb89f25b);
+        
+    
+            var feature_group_d144832063ce808a0107b3b3fbec6c9a = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var marker_8319edeeda14435893c8729433326919 = L.marker(
+                [14.41343323589265, 121.04361012848864],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_6c1c2685eec1354d8fd948c20437ed5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3f50a92fb89134f9a3faaa35c3bd344e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_21a400ee37c63ba267f73b172e47e446 = $(`<div id="html_21a400ee37c63ba267f73b172e47e446" style="width: 100.0%; height: 100.0%;"><b>Asian Hospital</b><br>220 East Avenue, Filinvest City, Alabang, Muntinlupa, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_3f50a92fb89134f9a3faaa35c3bd344e.setContent(html_21a400ee37c63ba267f73b172e47e446);
+            
+        
+
+        marker_8319edeeda14435893c8729433326919.bindPopup(popup_3f50a92fb89134f9a3faaa35c3bd344e)
+        ;
+
+        
+    
+    
+                marker_8319edeeda14435893c8729433326919.setIcon(icon_6c1c2685eec1354d8fd948c20437ed5e);
+            
+    
+            var marker_78bf02a1e75793a5e75db763830652d3 = L.marker(
+                [14.62305602072567, 121.02384373404237],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_b64f387e0a527ef11de0979a8181ce86 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_624b4fbaad88002bf5fa0909d25b7cf7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c9b6e89ba182d40fec666ed6364e2450 = $(`<div id="html_c9b6e89ba182d40fec666ed6364e2450" style="width: 100.0%; height: 100.0%;"><b>Cardinal Santos Medical Center</b><br>140 E. Rodriguez Sr. Avenue, San Juan, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_624b4fbaad88002bf5fa0909d25b7cf7.setContent(html_c9b6e89ba182d40fec666ed6364e2450);
+            
+        
+
+        marker_78bf02a1e75793a5e75db763830652d3.bindPopup(popup_624b4fbaad88002bf5fa0909d25b7cf7)
+        ;
+
+        
+    
+    
+                marker_78bf02a1e75793a5e75db763830652d3.setIcon(icon_b64f387e0a527ef11de0979a8181ce86);
+            
+    
+            var marker_22a260ecf326b52925a7654172b980ba = L.marker(
+                [14.61431183108001, 120.98239178299279],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_2d48e5a0e0e0afa09518bc1b9e3440b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7379046520bc95c11d3774f06fffed84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b26e2768c582049af53416dfaf596ecb = $(`<div id="html_b26e2768c582049af53416dfaf596ecb" style="width: 100.0%; height: 100.0%;"><b>Jose R Reyes Memorial Medical Center</b><br>San Lazaro Compound, Rizal Avenue, Sta. Cruz, Manila, Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_7379046520bc95c11d3774f06fffed84.setContent(html_b26e2768c582049af53416dfaf596ecb);
+            
+        
+
+        marker_22a260ecf326b52925a7654172b980ba.bindPopup(popup_7379046520bc95c11d3774f06fffed84)
+        ;
+
+        
+    
+    
+                marker_22a260ecf326b52925a7654172b980ba.setIcon(icon_2d48e5a0e0e0afa09518bc1b9e3440b4);
+            
+    
+            var marker_0cee8dae0512b57c0be46cbb52b86bda = L.marker(
+                [14.559058058170336, 121.01480267712553],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_b0235ae5685b846e32aaa6bd289fe866 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fd8c745ab25069e6bd1b16af143bd51f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b122585cb21f5000acb21049a4de9155 = $(`<div id="html_b122585cb21f5000acb21049a4de9155" style="width: 100.0%; height: 100.0%;"><b>Makati Medical Center</b><br>2 Amorsolo Street, Makati, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_fd8c745ab25069e6bd1b16af143bd51f.setContent(html_b122585cb21f5000acb21049a4de9155);
+            
+        
+
+        marker_0cee8dae0512b57c0be46cbb52b86bda.bindPopup(popup_fd8c745ab25069e6bd1b16af143bd51f)
+        ;
+
+        
+    
+    
+                marker_0cee8dae0512b57c0be46cbb52b86bda.setIcon(icon_b0235ae5685b846e32aaa6bd289fe866);
+            
+    
+            var marker_fd6d58500c85e7c193c53e1cef1c3e54 = L.marker(
+                [14.581786946488517, 120.98295985402949],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_c5f02a37eed1f072f94be71c900cac1d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16fbd434fbe78150ade0f6cf3a86d90a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_478acfaee1f57de285727580a0242af4 = $(`<div id="html_478acfaee1f57de285727580a0242af4" style="width: 100.0%; height: 100.0%;"><b>Manila Doctors Hospital</b><br>667 United Nations Ave, Ermita, Manila, 1000 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_16fbd434fbe78150ade0f6cf3a86d90a.setContent(html_478acfaee1f57de285727580a0242af4);
+            
+        
+
+        marker_fd6d58500c85e7c193c53e1cef1c3e54.bindPopup(popup_16fbd434fbe78150ade0f6cf3a86d90a)
+        ;
+
+        
+    
+    
+                marker_fd6d58500c85e7c193c53e1cef1c3e54.setIcon(icon_c5f02a37eed1f072f94be71c900cac1d);
+            
+    
+            var marker_6c7c2458a2f39fabae9dc17fb1168411 = L.marker(
+                [14.577428048635355, 120.98561542524331],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_650f4f98b139767b120ffcafe4dc57d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_439f74ffc66850dd4c30d716968a585a = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ea9f592f5945a077384999139edc4bc0 = $(`<div id="html_ea9f592f5945a077384999139edc4bc0" style="width: 100.0%; height: 100.0%;"><b>Philippine General Hospital</b><br>Taft Avenue, Ermita, Manila, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_439f74ffc66850dd4c30d716968a585a.setContent(html_ea9f592f5945a077384999139edc4bc0);
+            
+        
+
+        marker_6c7c2458a2f39fabae9dc17fb1168411.bindPopup(popup_439f74ffc66850dd4c30d716968a585a)
+        ;
+
+        
+    
+    
+                marker_6c7c2458a2f39fabae9dc17fb1168411.setIcon(icon_650f4f98b139767b120ffcafe4dc57d6);
+            
+    
+            var marker_c9d7dd94ebcc2e2b4ef6a3f410d3769d = L.marker(
+                [14.563904648061593, 121.06554835999249],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_9ee29423084254ab66bce42e4b078272 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a86095c147a37bf030bf360fd20bb84e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_989c4cae57e4454c203e46016ad27b5d = $(`<div id="html_989c4cae57e4454c203e46016ad27b5d" style="width: 100.0%; height: 100.0%;"><b>Rizal Medical Center</b><br>Rizal Avenue Extension, Pasig, Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_a86095c147a37bf030bf360fd20bb84e.setContent(html_989c4cae57e4454c203e46016ad27b5d);
+            
+        
+
+        marker_c9d7dd94ebcc2e2b4ef6a3f410d3769d.bindPopup(popup_a86095c147a37bf030bf360fd20bb84e)
+        ;
+
+        
+    
+    
+                marker_c9d7dd94ebcc2e2b4ef6a3f410d3769d.setIcon(icon_9ee29423084254ab66bce42e4b078272);
+            
+    
+            var marker_a0ec57ed7218d0851044033c9d98594d = L.marker(
+                [14.554966540797807, 121.04822128106332],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_af282b2a1e576f07fdea049bf27b6830 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_27e8160f96aabd53094bd4e533226726 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e549b0f6334b19ce5bb0d460d966157b = $(`<div id="html_e549b0f6334b19ce5bb0d460d966157b" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Global City</b><br>26th Street (corner McKinley Parkway), Bonifacio Global City, Taguig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_27e8160f96aabd53094bd4e533226726.setContent(html_e549b0f6334b19ce5bb0d460d966157b);
+            
+        
+
+        marker_a0ec57ed7218d0851044033c9d98594d.bindPopup(popup_27e8160f96aabd53094bd4e533226726)
+        ;
+
+        
+    
+    
+                marker_a0ec57ed7218d0851044033c9d98594d.setIcon(icon_af282b2a1e576f07fdea049bf27b6830);
+            
+    
+            var marker_d8e63b4387a643848d158d79ad703cf5 = L.marker(
+                [14.622327930192524, 121.023379653053],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_2bb7cb563ef4b2417b8d6da869606191 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62d120057d8a65688f04b33e2b7a0d73 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e760846d7f44bb4a7a9d7f301e2f4b62 = $(`<div id="html_e760846d7f44bb4a7a9d7f301e2f4b62" style="width: 100.0%; height: 100.0%;"><b>St Luke’s Medical Center Quezon City</b><br>279 E. Rodriguez Sr. Avenue, Quezon City, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_62d120057d8a65688f04b33e2b7a0d73.setContent(html_e760846d7f44bb4a7a9d7f301e2f4b62);
+            
+        
+
+        marker_d8e63b4387a643848d158d79ad703cf5.bindPopup(popup_62d120057d8a65688f04b33e2b7a0d73)
+        ;
+
+        
+    
+    
+                marker_d8e63b4387a643848d158d79ad703cf5.setIcon(icon_2bb7cb563ef4b2417b8d6da869606191);
+            
+    
+            var marker_cea31c774c8a816814ea4c8c945d999f = L.marker(
+                [14.589931028416567, 121.06898176428321],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_a089003e45832c00a8ca3271264656d3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_378346dce1ee59bf7f54115279b50b5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d0001305b7725bd92e3b6791695ddf2 = $(`<div id="html_0d0001305b7725bd92e3b6791695ddf2" style="width: 100.0%; height: 100.0%;"><b>The Medical City</b><br>Ortigas Avenue, Pasig, Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_378346dce1ee59bf7f54115279b50b5b.setContent(html_0d0001305b7725bd92e3b6791695ddf2);
+            
+        
+
+        marker_cea31c774c8a816814ea4c8c945d999f.bindPopup(popup_378346dce1ee59bf7f54115279b50b5b)
+        ;
+
+        
+    
+    
+                marker_cea31c774c8a816814ea4c8c945d999f.setIcon(icon_a089003e45832c00a8ca3271264656d3);
+            
+    
+            var marker_66ce35b2162b08827d13d27d523d22bc = L.marker(
+                [14.448173323056999, 120.98578142112832],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_037c95a6a10aa62e5829a7a5aacdad8e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0199ad2eae2e669f6bd61241899aba5b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e622d7f3b0a55178d9839387d83c279 = $(`<div id="html_0e622d7f3b0a55178d9839387d83c279" style="width: 100.0%; height: 100.0%;"><b>Perpetual Help Medical Center – Las Pinas</b><br>Alabang–Zapote Rd, Las Piñas, 1740 Metro Manila, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_0199ad2eae2e669f6bd61241899aba5b.setContent(html_0e622d7f3b0a55178d9839387d83c279);
+            
+        
+
+        marker_66ce35b2162b08827d13d27d523d22bc.bindPopup(popup_0199ad2eae2e669f6bd61241899aba5b)
+        ;
+
+        
+    
+    
+                marker_66ce35b2162b08827d13d27d523d22bc.setIcon(icon_037c95a6a10aa62e5829a7a5aacdad8e);
+            
+    
+            var marker_029b9f2fee6a83677031b88978f180f6 = L.marker(
+                [14.612536333783906, 120.98945861375576],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_b73261e97666e312be00885076b41f5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_24f48c1722dcbaea0a4f29b6b6add400 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6582b72de30f4cf2cee904d37080c153 = $(`<div id="html_6582b72de30f4cf2cee904d37080c153" style="width: 100.0%; height: 100.0%;"><b>University of Santo Tomas Hospital</b><br>España Blvd, Sampaloc, Manila, 1015 Metro Manila, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_24f48c1722dcbaea0a4f29b6b6add400.setContent(html_6582b72de30f4cf2cee904d37080c153);
+            
+        
+
+        marker_029b9f2fee6a83677031b88978f180f6.bindPopup(popup_24f48c1722dcbaea0a4f29b6b6add400)
+        ;
+
+        
+    
+    
+                marker_029b9f2fee6a83677031b88978f180f6.setIcon(icon_b73261e97666e312be00885076b41f5b);
+            
+    
+            var marker_94eaa62a3f75257b3fd69b810ce13e36 = L.marker(
+                [16.40096938090375, 120.59563285349591],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_a78eab3518114a7fdfa9eba339df3bbf = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cfd51b8657daa0acdc7908ea0f538380 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_31290f79c2f8fc44ff2da3e131a80041 = $(`<div id="html_31290f79c2f8fc44ff2da3e131a80041" style="width: 100.0%; height: 100.0%;"><b>Baguio General Hospital & Medical Center</b><br>Gov. Pack Rd, Baguio, 2600 Benguet, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_cfd51b8657daa0acdc7908ea0f538380.setContent(html_31290f79c2f8fc44ff2da3e131a80041);
+            
+        
+
+        marker_94eaa62a3f75257b3fd69b810ce13e36.bindPopup(popup_cfd51b8657daa0acdc7908ea0f538380)
+        ;
+
+        
+    
+    
+                marker_94eaa62a3f75257b3fd69b810ce13e36.setIcon(icon_a78eab3518114a7fdfa9eba339df3bbf);
+            
+    
+            var marker_242b1a6da9064d7283cabd7dee2c5797 = L.marker(
+                [17.656423566151734, 121.74701096207119],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_2c1e2b333df99ca94c9fb82eb9ec7c4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_714474880018ad661b10ab84c4bfd91e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_61d12db8ecc6079b363ff0184fc5811b = $(`<div id="html_61d12db8ecc6079b363ff0184fc5811b" style="width: 100.0%; height: 100.0%;"><b>Cagayan Valley Medical Center</b><br>Tuguegarao City, Cagayan, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_714474880018ad661b10ab84c4bfd91e.setContent(html_61d12db8ecc6079b363ff0184fc5811b);
+            
+        
+
+        marker_242b1a6da9064d7283cabd7dee2c5797.bindPopup(popup_714474880018ad661b10ab84c4bfd91e)
+        ;
+
+        
+    
+    
+                marker_242b1a6da9064d7283cabd7dee2c5797.setIcon(icon_2c1e2b333df99ca94c9fb82eb9ec7c4d);
+            
+    
+            var marker_176fdde0e6a1193d446a9462138bf69f = L.marker(
+                [15.034952369108327, 120.68520999500426],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_728fdbd859dc12c8a9c3f92fa05f7618 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2f66460747de13a33a41beab99e45c85 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_494d307e0f727660e25756b7ce08deab = $(`<div id="html_494d307e0f727660e25756b7ce08deab" style="width: 100.0%; height: 100.0%;"><b>Jose B. Lingad Memorial General Hospital</b><br>2MMM+RXP, San Fernando, 2000 Pampanga, Philippines<br>Services: Brachytherapy</div>`)[0];
+                popup_2f66460747de13a33a41beab99e45c85.setContent(html_494d307e0f727660e25756b7ce08deab);
+            
+        
+
+        marker_176fdde0e6a1193d446a9462138bf69f.bindPopup(popup_2f66460747de13a33a41beab99e45c85)
+        ;
+
+        
+    
+    
+                marker_176fdde0e6a1193d446a9462138bf69f.setIcon(icon_728fdbd859dc12c8a9c3f92fa05f7618);
+            
+    
+            var marker_29014a33bcb0b717e472bd6518cb924c = L.marker(
+                [15.096238537212123, 120.62428320953134],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_4f7b8cd62fefd90d8d7e4162abd0df89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dac24f4f349e4f781055261a067efb98 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6b9476974d4d79587984bc35fd6f2ef5 = $(`<div id="html_6b9476974d4d79587984bc35fd6f2ef5" style="width: 100.0%; height: 100.0%;"><b>Mount Carmel Cancer Center</b><br>3JWF+GPC, MacArthur Hwy, San Fernando, 2000 Pampanga, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_dac24f4f349e4f781055261a067efb98.setContent(html_6b9476974d4d79587984bc35fd6f2ef5);
+            
+        
+
+        marker_29014a33bcb0b717e472bd6518cb924c.bindPopup(popup_dac24f4f349e4f781055261a067efb98)
+        ;
+
+        
+    
+    
+                marker_29014a33bcb0b717e472bd6518cb924c.setIcon(icon_4f7b8cd62fefd90d8d7e4162abd0df89);
+            
+    
+            var marker_e9bfeea30600b1d7fb156d2d96968c60 = L.marker(
+                [15.125360015621407, 120.59837993533196],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_49b89f7a5fe49e028de21c202d9b6757 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_489cabade51f70258095b050fb0d3bc6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_33ec59d530107cb61fdc4657f5a240a4 = $(`<div id="html_33ec59d530107cb61fdc4657f5a240a4" style="width: 100.0%; height: 100.0%;"><b>Sacred Heart Medical Center</b><br>4HGX+594, R-9, Angeles, 2009 Pampanga, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_489cabade51f70258095b050fb0d3bc6.setContent(html_33ec59d530107cb61fdc4657f5a240a4);
+            
+        
+
+        marker_e9bfeea30600b1d7fb156d2d96968c60.bindPopup(popup_489cabade51f70258095b050fb0d3bc6)
+        ;
+
+        
+    
+    
+                marker_e9bfeea30600b1d7fb156d2d96968c60.setIcon(icon_49b89f7a5fe49e028de21c202d9b6757);
+            
+    
+            var marker_ae832b8099290d9878c8a7b3fb126575 = L.marker(
+                [13.766747059792731, 121.06618607919887],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_c5098d01896860b8bf06ba520f83ee6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a1c4301335ee34fc6d2c9a201f666890 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbd7105d4f09c71c856ad5985989b04d = $(`<div id="html_dbd7105d4f09c71c856ad5985989b04d" style="width: 100.0%; height: 100.0%;"><b>Batangas Medical Center</b><br>Bihi Road, Kumintang Ibaba, Batangas City, Batangas, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_a1c4301335ee34fc6d2c9a201f666890.setContent(html_dbd7105d4f09c71c856ad5985989b04d);
+            
+        
+
+        marker_ae832b8099290d9878c8a7b3fb126575.bindPopup(popup_a1c4301335ee34fc6d2c9a201f666890)
+        ;
+
+        
+    
+    
+                marker_ae832b8099290d9878c8a7b3fb126575.setIcon(icon_c5098d01896860b8bf06ba520f83ee6a);
+            
+    
+            var marker_2c7de05c20535488e7f88e712429d7c0 = L.marker(
+                [14.206010598055846, 121.15182856208645],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_cc2e0b8276673748219695dc753dd322 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d6042f0d019a6774003bffd419f6af23 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dbba0e9e479de71b7e53ce6234f78d1f = $(`<div id="html_dbba0e9e479de71b7e53ce6234f78d1f" style="width: 100.0%; height: 100.0%;"><b>Calamba Medical Center</b><br>Crossing, 26 Asian Highway, Calamba, 4027 Laguna, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_d6042f0d019a6774003bffd419f6af23.setContent(html_dbba0e9e479de71b7e53ce6234f78d1f);
+            
+        
+
+        marker_2c7de05c20535488e7f88e712429d7c0.bindPopup(popup_d6042f0d019a6774003bffd419f6af23)
+        ;
+
+        
+    
+    
+                marker_2c7de05c20535488e7f88e712429d7c0.setIcon(icon_cc2e0b8276673748219695dc753dd322);
+            
+    
+            var marker_0d7a02c3d950cdfa6ca270db6bcb1204 = L.marker(
+                [14.177118571780401, 121.27261077735352],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_225ef170d538c5504974a1cd3b3fd038 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_91ac7c2f14e10fc72790db8bf1974713 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a20b8166cb09d82d6af4939ae88b737a = $(`<div id="html_a20b8166cb09d82d6af4939ae88b737a" style="width: 100.0%; height: 100.0%;"><b>Global Care Cancer Institute</b><br>57GF+X3H, Manila S Rd, Bay, Laguna, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_91ac7c2f14e10fc72790db8bf1974713.setContent(html_a20b8166cb09d82d6af4939ae88b737a);
+            
+        
+
+        marker_0d7a02c3d950cdfa6ca270db6bcb1204.bindPopup(popup_91ac7c2f14e10fc72790db8bf1974713)
+        ;
+
+        
+    
+    
+                marker_0d7a02c3d950cdfa6ca270db6bcb1204.setIcon(icon_225ef170d538c5504974a1cd3b3fd038);
+            
+    
+            var marker_c9dab95b3c96cf4857abdddf01b3acf9 = L.marker(
+                [14.109092446602709, 121.14564945284849],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_a84e50b5f75335453a9ea04cc4504e12 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0d03a95c033edd4d150510c3403fa680 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_56c2fc409f0ddeddaf7e52ea88b92682 = $(`<div id="html_56c2fc409f0ddeddaf7e52ea88b92682" style="width: 100.0%; height: 100.0%;"><b>St Frances Cabrini Medical Center</b><br>President Jose P. Laurel Hwy, Santo Tomas, 4232 Batangas, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_0d03a95c033edd4d150510c3403fa680.setContent(html_56c2fc409f0ddeddaf7e52ea88b92682);
+            
+        
+
+        marker_c9dab95b3c96cf4857abdddf01b3acf9.bindPopup(popup_0d03a95c033edd4d150510c3403fa680)
+        ;
+
+        
+    
+    
+                marker_c9dab95b3c96cf4857abdddf01b3acf9.setIcon(icon_a84e50b5f75335453a9ea04cc4504e12);
+            
+    
+            var marker_8f221de7cf4ef21a1ee4bdf493de972c = L.marker(
+                [13.62279194372351, 123.19871675406435],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_b514d3f737b0b983315ee81543da0006 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_56cc947dc1cbf202a1e2ba6dd15eb765 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81c5d47c92b8cff95baf475f22e0fe29 = $(`<div id="html_81c5d47c92b8cff95baf475f22e0fe29" style="width: 100.0%; height: 100.0%;"><b>Bicol Medical Center</b><br>BMC Rd., Concepcion Pequeña, Naga City, Camarines Sur 4400, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_56cc947dc1cbf202a1e2ba6dd15eb765.setContent(html_81c5d47c92b8cff95baf475f22e0fe29);
+            
+        
+
+        marker_8f221de7cf4ef21a1ee4bdf493de972c.bindPopup(popup_56cc947dc1cbf202a1e2ba6dd15eb765)
+        ;
+
+        
+    
+    
+                marker_8f221de7cf4ef21a1ee4bdf493de972c.setIcon(icon_b514d3f737b0b983315ee81543da0006);
+            
+    
+            var marker_820dd03eed663a4b22015a7afca0ae01 = L.marker(
+                [10.702199545681115, 122.56674259854009],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_9a2932768b659467ac2090dbaad1cd4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8d4afc7db2f5f5220686008807fd1d45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_70d22da2bc180c1787ed0622e47de612 = $(`<div id="html_70d22da2bc180c1787ed0622e47de612" style="width: 100.0%; height: 100.0%;"><b>St Paul’s Hospital</b><br>Saint Paul's Hospital, General Luna St, Iloilo City Proper, Iloilo City, 5000 Iloilo, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_8d4afc7db2f5f5220686008807fd1d45.setContent(html_70d22da2bc180c1787ed0622e47de612);
+            
+        
+
+        marker_820dd03eed663a4b22015a7afca0ae01.bindPopup(popup_8d4afc7db2f5f5220686008807fd1d45)
+        ;
+
+        
+    
+    
+                marker_820dd03eed663a4b22015a7afca0ae01.setIcon(icon_9a2932768b659467ac2090dbaad1cd4d);
+            
+    
+            var marker_e4be79e3fee8feecfe1e536868be2624 = L.marker(
+                [10.718695739588084, 122.54187454608861],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_fddb2b683b37878906d96428ee695536 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1b50f3a7c5a44cbf867c0222bc5e0e4d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3b9e6eba6f882fa9d7388e20a101b2fa = $(`<div id="html_3b9e6eba6f882fa9d7388e20a101b2fa" style="width: 100.0%; height: 100.0%;"><b>Western Visayas Medical Center</b><br>PG9R+GJ5, Q. Abeto St, Mandurriao, Iloilo City, 5000 Iloilo, Philippines<br>Services: Brachytherapy</div>`)[0];
+                popup_1b50f3a7c5a44cbf867c0222bc5e0e4d.setContent(html_3b9e6eba6f882fa9d7388e20a101b2fa);
+            
+        
+
+        marker_e4be79e3fee8feecfe1e536868be2624.bindPopup(popup_1b50f3a7c5a44cbf867c0222bc5e0e4d)
+        ;
+
+        
+    
+    
+                marker_e4be79e3fee8feecfe1e536868be2624.setIcon(icon_fddb2b683b37878906d96428ee695536);
+            
+    
+            var marker_81c8493cdd3067737e9b28233b147855 = L.marker(
+                [10.309802911544619, 123.89118737762794],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_825c9e479d140c21134b19a64f96cdc8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_526f7923c80de59b65a12d46e138e6f6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5389d14b39cdd7e661ab53ecf5f31513 = $(`<div id="html_5389d14b39cdd7e661ab53ecf5f31513" style="width: 100.0%; height: 100.0%;"><b>Chong Hua Hospital</b><br>8V5R+F7Q, C. Rodriguez Street, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_526f7923c80de59b65a12d46e138e6f6.setContent(html_5389d14b39cdd7e661ab53ecf5f31513);
+            
+        
+
+        marker_81c8493cdd3067737e9b28233b147855.bindPopup(popup_526f7923c80de59b65a12d46e138e6f6)
+        ;
+
+        
+    
+    
+                marker_81c8493cdd3067737e9b28233b147855.setIcon(icon_825c9e479d140c21134b19a64f96cdc8);
+            
+    
+            var marker_bd62532a9511e986e7b2f37ff2e851e9 = L.marker(
+                [10.314743017397351, 123.90052805163381],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_4cecc4c8c2f211922c9146f726581282 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bc846dd41733b0b87ee05b8408a832c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9bb6b802446a02abab6359aa033a11df = $(`<div id="html_9bb6b802446a02abab6359aa033a11df" style="width: 100.0%; height: 100.0%;"><b>Perpetual Succour Hospital</b><br>Gorordo Ave, Cebu City, 6000 Cebu, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_bc846dd41733b0b87ee05b8408a832c1.setContent(html_9bb6b802446a02abab6359aa033a11df);
+            
+        
+
+        marker_bd62532a9511e986e7b2f37ff2e851e9.bindPopup(popup_bc846dd41733b0b87ee05b8408a832c1)
+        ;
+
+        
+    
+    
+                marker_bd62532a9511e986e7b2f37ff2e851e9.setIcon(icon_4cecc4c8c2f211922c9146f726581282);
+            
+    
+            var marker_6478ac68bde18607eb3cc920dd9a5f03 = L.marker(
+                [6.907024270226723, 122.08090254522553],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_e02dd237ad47a482e10ac36c71cb1578 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5641f92f3face1be23bfdcd64d80de41 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a64ac60717d50961e0e521ecde2bb34d = $(`<div id="html_a64ac60717d50961e0e521ecde2bb34d" style="width: 100.0%; height: 100.0%;"><b>Zamboanga City Medical Center</b><br>Veterans Avenue, Zamboanga City, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_5641f92f3face1be23bfdcd64d80de41.setContent(html_a64ac60717d50961e0e521ecde2bb34d);
+            
+        
+
+        marker_6478ac68bde18607eb3cc920dd9a5f03.bindPopup(popup_5641f92f3face1be23bfdcd64d80de41)
+        ;
+
+        
+    
+    
+                marker_6478ac68bde18607eb3cc920dd9a5f03.setIcon(icon_e02dd237ad47a482e10ac36c71cb1578);
+            
+    
+            var marker_4d2480d0f2e2cfb7b44511f3ecb54f0f = L.marker(
+                [8.498448026126908, 124.63024872530318],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_248fb8e51e79972b5f73d4a1c587fd1b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c90a7bb87bd3d8fcc46168165a197308 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fcf9d9d58326d3379600614273a4dfa4 = $(`<div id="html_fcf9d9d58326d3379600614273a4dfa4" style="width: 100.0%; height: 100.0%;"><b>Cagayan De Oro Polymedic Cancer Center</b><br>FJXJ+845, Butuan - Cagayan de Oro - Iligan Road, Highway, Cagayan de Oro, 9000 Misamis Oriental, Philippines<br>Services: Brachytherapy</div>`)[0];
+                popup_c90a7bb87bd3d8fcc46168165a197308.setContent(html_fcf9d9d58326d3379600614273a4dfa4);
+            
+        
+
+        marker_4d2480d0f2e2cfb7b44511f3ecb54f0f.bindPopup(popup_c90a7bb87bd3d8fcc46168165a197308)
+        ;
+
+        
+    
+    
+                marker_4d2480d0f2e2cfb7b44511f3ecb54f0f.setIcon(icon_248fb8e51e79972b5f73d4a1c587fd1b);
+            
+    
+            var marker_d0ed0a6ff95b88e7a4d17761b5694a4b = L.marker(
+                [8.475515460840791, 124.65479442089321],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_4d60949a7fbe616043d79da4685008b5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1142b5d2946caabacf0de0774992045b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a9d9bb89d62a451a83b1e8e3afcba7ea = $(`<div id="html_a9d9bb89d62a451a83b1e8e3afcba7ea" style="width: 100.0%; height: 100.0%;"><b>Maria Reyna - Xavier University Hospital</b><br>FMG3+6XV, Hayes St, Cagayan de Oro, 9000 Misamis Oriental, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_1142b5d2946caabacf0de0774992045b.setContent(html_a9d9bb89d62a451a83b1e8e3afcba7ea);
+            
+        
+
+        marker_d0ed0a6ff95b88e7a4d17761b5694a4b.bindPopup(popup_1142b5d2946caabacf0de0774992045b)
+        ;
+
+        
+    
+    
+                marker_d0ed0a6ff95b88e7a4d17761b5694a4b.setIcon(icon_4d60949a7fbe616043d79da4685008b5);
+            
+    
+            var marker_2a7cc8119952bddb8842cd6d845a2059 = L.marker(
+                [7.07009574401395, 125.60444475057707],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_329364fa92042d6a0477461abbb07a5d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e0acce8e9147403f890ef53006a7dcea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afca6c002bf48783b70cf9e88430a465 = $(`<div id="html_afca6c002bf48783b70cf9e88430a465" style="width: 100.0%; height: 100.0%;"><b>Davao Doctors Hospital</b><br>118 Elpidio Quirino Ave, Poblacion District, Davao City, 8000 Davao del Sur, Philippines<br>Services: Basic RT, Advanced Techniques, Brachytherapy</div>`)[0];
+                popup_e0acce8e9147403f890ef53006a7dcea.setContent(html_afca6c002bf48783b70cf9e88430a465);
+            
+        
+
+        marker_2a7cc8119952bddb8842cd6d845a2059.bindPopup(popup_e0acce8e9147403f890ef53006a7dcea)
+        ;
+
+        
+    
+    
+                marker_2a7cc8119952bddb8842cd6d845a2059.setIcon(icon_329364fa92042d6a0477461abbb07a5d);
+            
+    
+            var marker_e3be73ab244be4c3f7a997e433ad80c2 = L.marker(
+                [7.42204125798825, 125.82883191351523],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_f9186f2d95e2241b7402d46ea2537973 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_7798fbb5d4e5f0806d23fb993801bd4c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_147ea9095134c29626d59202eba5d848 = $(`<div id="html_147ea9095134c29626d59202eba5d848" style="width: 100.0%; height: 100.0%;"><b>Davao Regional Medical Center</b><br>CRCH+VGX, Tagum, 8100 Davao del Norte, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_7798fbb5d4e5f0806d23fb993801bd4c.setContent(html_147ea9095134c29626d59202eba5d848);
+            
+        
+
+        marker_e3be73ab244be4c3f7a997e433ad80c2.bindPopup(popup_7798fbb5d4e5f0806d23fb993801bd4c)
+        ;
+
+        
+    
+    
+                marker_e3be73ab244be4c3f7a997e433ad80c2.setIcon(icon_f9186f2d95e2241b7402d46ea2537973);
+            
+    
+            var marker_1714d1b19da7856c25c865a0fea58128 = L.marker(
+                [7.098282042706368, 125.61988074384034],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_2ff930e93af648bdf66b0c0b8f2464fa = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a28dafbc1b2c8a62090e27ac6fd5d3ac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8adf730bf3e2324c72b3494d9d4af776 = $(`<div id="html_8adf730bf3e2324c72b3494d9d4af776" style="width: 100.0%; height: 100.0%;"><b>Southern Philippines Medical Center</b><br>Southern Philippines Medical Center, J.P. Laurel Ave, Bajada, Davao City, 8000 Davao del Sur, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_a28dafbc1b2c8a62090e27ac6fd5d3ac.setContent(html_8adf730bf3e2324c72b3494d9d4af776);
+            
+        
+
+        marker_1714d1b19da7856c25c865a0fea58128.bindPopup(popup_a28dafbc1b2c8a62090e27ac6fd5d3ac)
+        ;
+
+        
+    
+    
+                marker_1714d1b19da7856c25c865a0fea58128.setIcon(icon_2ff930e93af648bdf66b0c0b8f2464fa);
+            
+    
+            var marker_cc78445002b349f51e1bd2df1810411f = L.marker(
+                [7.200044296620431, 124.23667603441295],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_acd25679bb3e0f847b7076b1ba1884f0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cd98333679c8405c581cac039685d34d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fef7e55289ade7d38ba70fd7bdff44d5 = $(`<div id="html_fef7e55289ade7d38ba70fd7bdff44d5" style="width: 100.0%; height: 100.0%;"><b>Cotabato Regional Medical Center</b><br>10 Sinsuat Ave, Cotabato City, 9600 Maguindanao, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_cd98333679c8405c581cac039685d34d.setContent(html_fef7e55289ade7d38ba70fd7bdff44d5);
+            
+        
+
+        marker_cc78445002b349f51e1bd2df1810411f.bindPopup(popup_cd98333679c8405c581cac039685d34d)
+        ;
+
+        
+    
+    
+                marker_cc78445002b349f51e1bd2df1810411f.setIcon(icon_acd25679bb3e0f847b7076b1ba1884f0);
+            
+    
+            var marker_3fd4318bf464d43494980e0a74f4d3cf = L.marker(
+                [6.12028583215008, 125.17835380707777],
+                {
+}
+            ).addTo(feature_group_d144832063ce808a0107b3b3fbec6c9a);
+        
+    
+            var icon_067701aec55c298ae413769ef3131761 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "medkit",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46d2f4957b1f18646f3cde51aa70b996 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9fba064301056764c7aeb5e56c739f97 = $(`<div id="html_9fba064301056764c7aeb5e56c739f97" style="width: 100.0%; height: 100.0%;"><b>General Santos Doctors Hospital</b><br>459H+QCV, General Santos City, South Cotabato, Philippines<br>Services: Basic RT, Brachytherapy</div>`)[0];
+                popup_46d2f4957b1f18646f3cde51aa70b996.setContent(html_9fba064301056764c7aeb5e56c739f97);
+            
+        
+
+        marker_3fd4318bf464d43494980e0a74f4d3cf.bindPopup(popup_46d2f4957b1f18646f3cde51aa70b996)
+        ;
+
+        
+    
+    
+                marker_3fd4318bf464d43494980e0a74f4d3cf.setIcon(icon_067701aec55c298ae413769ef3131761);
+            
+    
+            feature_group_d144832063ce808a0107b3b3fbec6c9a.addTo(map_993e253ff3dd53932953dbb2bb89f25b);
+        
+    
+            var layer_control_cdc134b1696b0d11639eb1b7e7712d47_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_c40be0fbfbc1abcc50283452323e676f,
+                },
+                overlays :  {
+                    "\u003cspan style=\"color:blue; font-size:16px;\"\u003eBasic RT (2D/3D CRT, IMRT, IGRT, VMAT, Electron Therapy)\u003c/span\u003e" : feature_group_4c697c883206d066d53e6f89c1d3f68b,
+                    "\u003cspan style=\"color:red; font-size:16px;\"\u003eAdvanced Techniques (SRS, SBRT, TBI, IORT)\u003c/span\u003e" : feature_group_5f33e7d9845078de081a9a60dbc7757f,
+                    "\u003cspan style=\"color:green; font-size:16px;\"\u003eBrachytherapy (HDR \u0026 IGBT)\u003c/span\u003e" : feature_group_d144832063ce808a0107b3b3fbec6c9a,
+                },
+            };
+            let layer_control_cdc134b1696b0d11639eb1b7e7712d47 = L.control.layers(
+                layer_control_cdc134b1696b0d11639eb1b7e7712d47_layers.base_layers,
+                layer_control_cdc134b1696b0d11639eb1b7e7712d47_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_993e253ff3dd53932953dbb2bb89f25b);
+
+        
+</script>
+</html>
